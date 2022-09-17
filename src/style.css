@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=Reem+Kufi+Fun&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=Reem+Kufi+Fun&family=Yantramanav:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=Reem+Kufi+Fun&family=Roboto:wght@300&family=Yantramanav:wght@300&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #dff9fb;
+    max-width: 100%;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    margin-top: 90px;
+    font-family: 'Combo', cursive;
+    background-color: #22a6b3;
+    font-size: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    margin-top: 35px;
+    font-family: 'Yantramanav', sans-serif;
+    font-size: 20px;
+}
+
+button {
+    background-color: aliceblue;
+    margin-top: 30px;
+    justify-content: center;
+    text-align: center;
+}
+
+input {
+    margin-top: 30px;
+    margin-left: 20%;
+}
+
+div {
+    background-color: blueviolet;
+    margin-bottom: 100px;
+}
+
+#emailLogin {
+    padding: 5px 5px 5px 17px;
+    width: 220px;
+    margin-bottom: 15px;
+    border-radius: 5px; 
+    color: red;
+    background-color: #dff9fb;
+}
+
+
+#passwordLogin {
+    padding: 5px 5px 5px 17px;
+    width: 220px;
+    margin-bottom: 15px;
+    border-radius: 5px; 
+    color: blue;
+    background-color: #dff9fb; 
+    margin-top: 1px; 
+}
+
+#loginButton1 {
+    background-color: #0097e6;
+    border-radius: 10px;
+    color: white;
+    width: 220px;
+    height: 30px;
+    margin-right: 50px;
+    margin-left: 80px;
+    font-size: 20px;
+    box-shadow:black;
+}
+
+#googleLoginBtnG {
+    width: 300px;
+    height: 60px;
+    margin-left: 38px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    justify-content: end;
+}
