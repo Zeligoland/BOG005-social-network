@@ -36,6 +36,7 @@ export const Welcome = () => {
   googleLoginBtn.setAttribute("id", "googleLoginBtnG");
   googleLoginBtn.textContent = "Sign in with Google";
   const registerLink = document.createElement("button");
+  registerLink.setAttribute("id", "registerLink1")
   registerLink.textContent = "¿No tienes una cuenta? ¡Puedes crearla aquí!";
 
   sectioni.append(emailInput, passInput, loginButton, googleLoginBtn, registerLink);
