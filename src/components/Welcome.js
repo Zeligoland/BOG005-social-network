@@ -26,8 +26,8 @@ export const Welcome = () => {
   emailInput.textContent = "Ingresa tu e-mail"
   const passInput = document.createElement("input");
   passInput.setAttribute("requiered", "")
-  passInput.setAttribute("placeholder", "Contraseña")
-  passInput.setAttribute("id", "passwordLogin")
+  passInput.setAttribute("placeholder", "Contraseña");
+  passInput.setAttribute("id", "passwordLogin");
   passInput.textContent = "Ingresa tu contraseña"
   const loginButton = document.createElement("button");
   loginButton.setAttribute("id", "loginButton1")
