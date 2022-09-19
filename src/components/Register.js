@@ -27,9 +27,14 @@ export const Register = () => {
   googleRegisterBtn.setAttribute("id", "googleRegisterBtn");
   const backButton = document.createElement("button");
   backButton.textContent = "¿Ya tienes una cuenta? ¡Ingresa aquí!";
-  backButton.setAttribute("id", "backToLoginBtn")
+  backButton.setAttribute("id", "backToLoginBtn");
+  const welcomeImg = document.createElement("img");
+  welcomeImg.setAttribute("src", "./img/cultural-diversity.png");
+  welcomeImg.setAttribute("id", "diversityImage");
 
   welcomeTitle.textContent = "Aquí puedes registrarte rápido y facil.";
+
+
 
   registerSection.append(
     nameRequest,
@@ -47,7 +52,8 @@ export const Register = () => {
 
   div.append(
     welcomeTitle,
-    registerSection
+    registerSection,
+    welcomeImg
   );
 
   return div;

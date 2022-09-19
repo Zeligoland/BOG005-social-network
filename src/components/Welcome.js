@@ -12,8 +12,11 @@ export const Welcome = () => {
   const welcomeTitle = document.createElement("p");
   welcomeTitle.textContent = "¡Bienvenid@ a  la app donde podrás ampliar tu red de apoyo!";
   const infoTitle = document.createElement("p");
+  infoTitle.className = "welcomeMessage";
   infoTitle.textContent = "Si eres migrante en Colombia, no conoces muchas personas y deseas conocer más, este es el lugar indicado.";
-  
+  const welcomeImage = document.createElement("img");
+  welcomeImage.setAttribute("src", "./img/cultural-diversity.png");
+  welcomeImage.setAttribute("id", "diversityImage");
 
   div.append(nameApp, welcomeTitle, infoTitle);
 
@@ -35,7 +38,7 @@ export const Welcome = () => {
   loginButton.textContent = "Entrar";
   const googleLoginBtn = document.createElement("button");
   googleLoginBtn.setAttribute("id", "googleLoginBtnG");
-  googleLoginBtn.textContent = "Sign in with Google";
+  googleLoginBtn.textContent = "Ingresa con Google";
   const registerLink = document.createElement("button");
   registerLink.setAttribute("id", "registerLink1")
   registerLink.textContent = "¿No tienes una cuenta? ¡Puedes crearla aquí!";
@@ -46,7 +49,7 @@ export const Welcome = () => {
     onNavigate("/register");
   });
   
-  div.append(header, sectioni);
+  div.append(header, sectioni, welcomeImage);
 
   return div;
 };
