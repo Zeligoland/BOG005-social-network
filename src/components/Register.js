@@ -3,18 +3,43 @@ import { onNavigate } from "../main.js";
 export const Register = () => {
   // esta función estará disponible en el main
   const div = document.createElement("div");
-  const welcomeTitle = document.createElement("h2");
-  const nameRequest = document.createElement("input");
-  const lastNameRequest = document.createElement("input");
-  const emailRequest = document.createElement("input");
-  const button = document.createElement("button");
-  const googleLoginBtn = document.createElement("button");
-  const backButton = document.createElement("button");
 
-  welcomeTitle.textContent = "Regístrate Aquí";
-  button.textContent = "Enviar Información";
-  googleLoginBtn.textContent = "Continua con Google";
-  backButton.textContent = "Regresar";
+  const registerSection = document.createElement("section");
+  registerSection.setAttribute("id", "registerBox");
+  const welcomeTitle = document.createElement("p");
+  const nameRequest = document.createElement("input");
+  nameRequest.setAttribute("placeholder", "Nombres");
+  nameRequest.setAttribute("id", "nameInput");
+  const lastNameRequest = document.createElement("input");
+  lastNameRequest.setAttribute("placeholder", "Apellidos");
+  lastNameRequest.setAttribute("id", "lastNameInput");
+  const emailRequest = document.createElement("input");
+  emailRequest.setAttribute("placeholder", "Correo Electrónico");
+  emailRequest.setAttribute("id", "emailInput");
+  const passwordRequest = document.createElement("input");
+  passwordRequest.setAttribute("placeholder", "Contraseña");
+  passwordRequest.setAttribute("id", "passInput");
+  const button = document.createElement("button");
+  button.textContent = "Registrarme";
+  button.setAttribute("id", "registerButton");
+  const googleRegisterBtn = document.createElement("button");
+  googleRegisterBtn.textContent = "Continua con Google";
+  googleRegisterBtn.setAttribute("id", "googleRegisterBtn");
+  const backButton = document.createElement("button");
+  backButton.textContent = "¿Ya tienes una cuenta? ¡Ingresa aquí!";
+  backButton.setAttribute("id", "backToLoginBtn")
+
+  welcomeTitle.textContent = "Aquí puedes registrarte rápido y facil.";
+
+  registerSection.append(
+    nameRequest,
+    lastNameRequest,
+    emailRequest,
+    passwordRequest,
+    button,
+    googleRegisterBtn,
+    backButton
+  );
 
   backButton.addEventListener("click", () => {
     onNavigate("/");
@@ -22,12 +47,7 @@ export const Register = () => {
 
   div.append(
     welcomeTitle,
-    nameRequest,
-    lastNameRequest,
-    emailRequest,
-    button,
-    googleLoginBtn,
-    backButton
+    registerSection
   );
 
   return div;

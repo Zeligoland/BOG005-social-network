@@ -9,10 +9,11 @@ export const Welcome = () => {
   header.className = "header";
   const nameApp = document.createElement("section");
   nameApp.className = "logo;"
-  const welcomeTitle = document.createElement("h2");
-  welcomeTitle.textContent = "¡Bienvenid@ a  la app donde podrás ampliar tu red de apoyo¡";
-  const infoTitle = document.createElement("h3");
+  const welcomeTitle = document.createElement("p");
+  welcomeTitle.textContent = "¡Bienvenid@ a  la app donde podrás ampliar tu red de apoyo!";
+  const infoTitle = document.createElement("p");
   infoTitle.textContent = "Si eres migrante en Colombia, no conoces muchas personas y deseas conocer más, este es el lugar indicado.";
+  
 
   div.append(nameApp, welcomeTitle, infoTitle);
 

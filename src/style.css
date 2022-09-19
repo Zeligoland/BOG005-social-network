@@ -19,17 +19,17 @@ body {
     background-size: 340px;
 }
 
-h2 {
+p {
     color: white;
     text-align: center;
     margin-top: 100px;
-    font-family: 'DM Mono', monospace;
-    font-size: 20px;
+    font-family: 'DM Mono';
+    font-size: 14px;
     margin-left: 25px;
     margin-right: 25px;
 }
 
-h3 {
+#welcomeInfo {
     color: white;
     text-align: center;
     margin-top: 30px;
@@ -58,15 +58,18 @@ input {
     margin-top: 20px;
     margin-left: 30px;
     margin-right: 30px;
-    box-shadow: 2px 2px 2px 1px #ABA6BF;
 }
 
-#emailLogin {
+#emailLogin, 
+#nameInput, 
+#lastNameInput, 
+#emailInput, 
+#passInput,
+#passwordLogin {
     padding: 8px 8px 8px 25px;
     width: 220px;
     margin-bottom: 15px;
     border-radius: 5px; 
-    color: red;
     background-color: white;
     border: none;
     margin-left: 55px;
@@ -75,20 +78,11 @@ input {
 
 
 #passwordLogin {
-    padding: 8px 8px 8px 25px;
-    width: 220px;
-    margin-bottom: 15px;
-    border-radius: 5px; 
-    color: blue;
-    background-color: white; 
     margin-top: 1px; 
-    border: none;
-    margin-left: 55px;
-    font-family: 'DM Mono', monospace;
-
 }
 
-#loginButton1 {
+#loginButton1,
+#registerButton {
     background-color: #595775;
     border-radius: 5px;
     color: white;
@@ -101,7 +95,7 @@ input {
     margin-top: 1px;
 }
 
-#googleLoginBtnG {
+#googleLoginBtnG, #googleRegisterBtn {
     width: 190px;
     height: 29px;
     margin-left: 70px;
@@ -117,7 +111,8 @@ input {
     margin-top: 10px;
 }
 
-#registerLink1 {
+#registerLink1,
+#backToLoginBtn {
     background-color: #F1E0D6;
     border-radius: 5px;
     color: white;
@@ -125,10 +120,19 @@ input {
     height: 40px;
     margin-right: 50px;
     margin-left: 55px;
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
+    font-family: 'DM Mono', mixed;
+    font-size: 11px;
     box-shadow:black;
     margin-top: 9px;
     border: none;
     color: black;
+}
+
+#registerBox {
+    margin-bottom: 100px;
+    background-color: #F1E0D6;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
