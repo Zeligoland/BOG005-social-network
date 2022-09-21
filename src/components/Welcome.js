@@ -20,7 +20,6 @@ export const Welcome = () => {
 
   div.append(nameApp, welcomeTitle, infoTitle);
 
-
   const sectioni = document.createElement("section");
   sectioni.setAttribute("id", "sectioni");
   const emailInput = document.createElement("input");
@@ -45,7 +44,7 @@ export const Welcome = () => {
 
   sectioni.append(emailInput, passInput, loginButton, googleLoginBtn, registerLink);
 
-  registerLink.addEventListener("click", () => {
+   registerLink.addEventListener("click", () => {
     onNavigate("/register");
   });
   
