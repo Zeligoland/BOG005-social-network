@@ -32,11 +32,18 @@ export const Welcome = () => {
   emailInput.setAttribute("id", "emailLogin");
   emailInput.textContent = "Ingresa tu e-mail";
   const passInput = document.createElement("input");
+<<<<<<< HEAD
   passInput.setAttribute("requiered", "")
   passInput.setAttribute("placeholder", "Contraseña");
   passInput.setAttribute("id", "passwordLogin");
   passInput.setAttribute("type", "password");
   passInput.textContent = "Ingresa tu contraseña"
+=======
+  passInput.setAttribute("requiered", "");
+  passInput.setAttribute("placeholder", "Contraseña");
+  passInput.setAttribute("id", "passwordLogin");
+  passInput.textContent = "Ingresa tu contraseña";
+>>>>>>> 6537cb0 (Dando formato y haciendo ajustes para tests)
   const loginButton = document.createElement("button");
   loginButton.setAttribute("id", "loginButton1");
   loginButton.textContent = "Entrar";
@@ -47,11 +54,22 @@ export const Welcome = () => {
   registerLink.setAttribute("id", "registerLink1");
   registerLink.textContent = "¿No tienes una cuenta? ¡Puedes crearla aquí!";
 
+<<<<<<< HEAD
   const errorNotice = document.createElement("p");
   errorNotice.setAttribute("id", "error-paragraph")
 
   sectioni.append(emailInput, passInput, loginButton, googleLoginBtn, registerLink, errorNotice);
 
+=======
+  sectioni.append(
+    emailInput,
+    passInput,
+    loginButton,
+    googleLoginBtn,
+    registerLink
+  );
+
+>>>>>>> 6537cb0 (Dando formato y haciendo ajustes para tests)
   registerLink.addEventListener("click", () => {
     onNavigate("/register");
   });

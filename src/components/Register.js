@@ -30,9 +30,12 @@ export const Register = () => {
 
   welcomeTitle.textContent = "Aquí puedes registrarte rápido y facil.";
 
+<<<<<<< HEAD
   const errorNotice = document.createElement("p");
   errorNotice.setAttribute("id", "error-paragraph")
 
+=======
+>>>>>>> 6537cb0 (Dando formato y haciendo ajustes para tests)
   registerSection.append(
     emailRequest,
     passwordRequest,
@@ -46,6 +49,7 @@ export const Register = () => {
     onNavigate("/");
   });
 
+<<<<<<< HEAD
    // Escuchador botón google
    googleRegisterBtn.addEventListener("click", () => {
     popupGoogle()
@@ -86,6 +90,9 @@ export const Register = () => {
     registerSection,
     welcomeImg
   );
+=======
+  div.append(welcomeTitle, registerSection, welcomeImg);
+>>>>>>> 6537cb0 (Dando formato y haciendo ajustes para tests)
 
   return div;
 };
