@@ -34,8 +34,6 @@ export const Register = () => {
 
   welcomeTitle.textContent = "Aquí puedes registrarte rápido y facil.";
 
-
-
   registerSection.append(
     nameRequest,
     lastNameRequest,
@@ -50,11 +48,7 @@ export const Register = () => {
     onNavigate("/");
   });
 
-  div.append(
-    welcomeTitle,
-    registerSection,
-    welcomeImg
-  );
+  div.append(welcomeTitle, registerSection, welcomeImg);
 
   return div;
 };

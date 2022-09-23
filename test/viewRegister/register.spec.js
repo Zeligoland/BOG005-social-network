@@ -1,6 +1,4 @@
-/*import {Register} from '../../src/components/Register.js'
-
-describe('Register View', () => {
+/* describe('Register View', () => {
     it('Cambie a ruta Register', () => {
         document.body.innerHTML = '<div id="root"></div>'
     //      expect(typeof Register).toBe('function');
