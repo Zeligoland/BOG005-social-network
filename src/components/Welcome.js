@@ -10,12 +10,14 @@ export const Welcome = () => {
   const header = document.createElement("header");
   header.className = "header";
   const nameApp = document.createElement("section");
-  nameApp.className = "logo;"
+  nameApp.className = "logo;";
   const welcomeTitle = document.createElement("p");
-  welcomeTitle.textContent = "¡Bienvenid@ a  la app donde podrás ampliar tu red de apoyo!";
+  welcomeTitle.textContent =
+    "¡Bienvenid@ a  la app donde podrás ampliar tu red de apoyo!";
   const infoTitle = document.createElement("p");
   infoTitle.className = "welcomeMessage";
-  infoTitle.textContent = "Si eres migrante en Colombia, no conoces muchas personas y deseas conocer más, este es el lugar indicado.";
+  infoTitle.textContent =
+    "Si eres migrante en Colombia, no conoces muchas personas y deseas conocer más, este es el lugar indicado.";
   const welcomeImage = document.createElement("img");
   welcomeImage.setAttribute("src", "./img/cultural-diversity.png");
   welcomeImage.setAttribute("id", "diversityImage");
@@ -25,10 +27,10 @@ export const Welcome = () => {
   const sectioni = document.createElement("section");
   sectioni.setAttribute("id", "sectioni");
   const emailInput = document.createElement("input");
-  emailInput.setAttribute("requiered", "")
-  emailInput.setAttribute("placeholder", "Correo electrónico")
-  emailInput.setAttribute("id", "emailLogin")
-  emailInput.textContent = "Ingresa tu e-mail"
+  emailInput.setAttribute("requiered", "");
+  emailInput.setAttribute("placeholder", "Correo electrónico");
+  emailInput.setAttribute("id", "emailLogin");
+  emailInput.textContent = "Ingresa tu e-mail";
   const passInput = document.createElement("input");
   passInput.setAttribute("requiered", "")
   passInput.setAttribute("placeholder", "Contraseña");
@@ -36,13 +38,13 @@ export const Welcome = () => {
   passInput.setAttribute("type", "password");
   passInput.textContent = "Ingresa tu contraseña"
   const loginButton = document.createElement("button");
-  loginButton.setAttribute("id", "loginButton1")
+  loginButton.setAttribute("id", "loginButton1");
   loginButton.textContent = "Entrar";
   const googleLoginBtn = document.createElement("button");
   googleLoginBtn.setAttribute("id", "googleLoginBtnG");
   //googleLoginBtn.textContent = "Ingresa con Google";
   const registerLink = document.createElement("button");
-  registerLink.setAttribute("id", "registerLink1")
+  registerLink.setAttribute("id", "registerLink1");
   registerLink.textContent = "¿No tienes una cuenta? ¡Puedes crearla aquí!";
 
   const errorNotice = document.createElement("p");
@@ -53,41 +55,6 @@ export const Welcome = () => {
   registerLink.addEventListener("click", () => {
     onNavigate("/register");
   });
-
-  // Escuchador botón google
-  googleLoginBtn.addEventListener("click", () => {
-    popupGoogle()
-    .then(() => {
-      onNavigate("/wall");
-    });
-  });
-
-  //Escuchador boton login
-  loginButton.addEventListener("click", (e) => {
-    e.preventDefault();
-    const loginEmail = emailInput.value;
-    const loginPassword = passInput.value;
-    signInUser(loginEmail, loginPassword)
-    .then(() => {
-      onNavigate("/wall");
-    })
-    .catch((error) => {
-      const userNotFound = "Este email no está registrado";
-      const wrongPassword = "Clave equivocada, intente de nuevo";
-      const invalidEmail = "Correo invalido, revise la información suministrada";
-      const enterPassword = "Por favor ingrese la contraseña";
-
-      if (error.code === "auth/invalid-email"){
-        errorNotice.innerText = invalidEmail;
-      } else if (error.code === "auth/wrong-password"){
-        errorNotice.innerText = wrongPassword;
-      } else if (error.code === "auth/user-not-found"){
-        errorNotice.innerText = userNotFound;
-      } else if (error.code === "auth/internal-error"){
-        errorNotice.innerText = enterPassword;
-      }
-      });
-    });
 
   div.append(header, sectioni, welcomeImage);
 
