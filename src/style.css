@@ -5,7 +5,7 @@
 
 
 * {
-    margin: 0;
+    margin: 2rem 0rem 0rem 0rem;
     padding: 0;
     box-sizing: border-box;
 }
@@ -22,7 +22,7 @@ body {
 p {
     color: white;
     text-align: center;
-    margin-top: 120px;
+    margin-top: 100px;
     font-family: 'DM Mono';
     font-size: 14px;
     margin-left: 25px;
@@ -47,24 +47,23 @@ button {
 }
 
 
-#sectioni,
-#registerBox {
+#sectioni {
     margin-bottom: 17px;
     background-color: #F1E0D6;
     border-radius: 10px;
-    margin-top: 55px;
+    margin-top: 20px;
     margin-left: 30px;
     margin-right: 30px;
     height: 16rem;
 }
 
-#emailLogin, 
+#emailLogin,
 #passwordLogin {
     padding: 8px 8px 8px 25px;
     width: 240px;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 15px;
-    border-radius: 5px; 
+    border-radius: 5px;
     background-color: white;
     border: none;
     margin-left: 40px;
@@ -72,25 +71,25 @@ button {
     color: #595775;
 }
 
-/*#registerBox {
-    margin-bottom: 17px;
+#registerBox {
+    margin-bottom: 10px;
     background-color: #F1E0D6;
     border-radius: 10px;
-    margin-top: 60px;
+    margin-top: 20px;
     margin-left: 30px;
     margin-right: 30px;
-    height: 20rem;
-}*/
+    height: 24rem;
+}
 
-#nameInput, 
-#lastNameInput, 
-#emailInput, 
+#nameInput,
+#lastNameInput,
+#emailInput,
 #passInput {
     padding: 8px 8px 8px 25px;
     width: 240px;
     margin-top: 15px;
     margin-bottom: 15px;
-    border-radius: 5px; 
+    border-radius: 5px;
     background-color: white;
     border: none;
     margin-left: 40px;
@@ -100,7 +99,7 @@ button {
 
 
 #passwordLogin {
-    margin-top: 1px; 
+    margin-top: 1px;
 }
 
 #loginButton1,
@@ -115,10 +114,9 @@ button {
     font-family: 'DM Mono', medium;
     font-size: 13px;
     margin-top: 1px;
-    cursor: pointer;
 }
 
-/*#googleLoginBtnG, 
+#googleLoginBtnG,
 #googleRegisterBtn {
     width: 240px;
     height: 29px;
@@ -126,7 +124,7 @@ button {
     margin-left: 40px;
     border-radius: 10px;
     font-size: 14px;
-    font-family: 'Roboto', medium;
+    font-family: 'DM Mono', medium;
     color: #595775;
     background-image: url(img/btn_google_light_normal_ios.png);
     background-repeat: no-repeat;
@@ -134,28 +132,8 @@ button {
     background-position: -1px;
     border: none;
     background-color: white;
-    color: 0,0,0 (54%);
+    color: 0, 0, 0 (54%);
     margin-top: 10px;
-}*/
-
-#googleLoginBtnG, 
-#googleRegisterBtn {
-    width: 240px;
-    height: 29px;
-    padding: 6px;
-    margin-left: 40px;
-    border-radius: 10px;
-    font-size: 14px;
-    color: #595775;
-    background-image: url(img/btn_google_signin_light_normal_web.png);
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center;
-    border: none;
-    background-color: white;
-    color: 0,0,0 (54%);
-    margin-top: 10px;
-    cursor: pointer;
 }
 
 #registerLink1,
@@ -169,20 +147,113 @@ button {
     margin-left: 55px;
     font-family: 'DM Mono', mixed;
     font-size: 11px;
-    box-shadow:black;
+    box-shadow: black;
     margin-top: 9px;
     border: none;
     color: black;
-    cursor: pointer;
 }
 
 #diversityImage {
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 0rem;
     bottom: 0;
 }
 
-#error-paragraph {
-    margin-top: 10px;
-}
+/* #postArea VISTA MURO{
+     background-color: blue;
+} */
 
+
+
+/*aplicando media querys tablet 760px*/
+@media (min-width: 760px) {
+    #sectioni {
+        padding: 1.5rem 0rem 1rem 0rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 27rem;
+        margin-block-end: auto;
+        /* width: fit-content; */
+    }
+
+    #diversityImage {
+        margin-top: 1.5rem;
+        /* position: absolute;
+        bottom: 0%; */
+    }
+
+    p {
+        font-size: 25px;
+    }
+
+    .welcomeMessage {
+        font-size: 25px;
+    }
+
+    #emailLogin,
+    #passwordLogin {
+        width: 80%;
+        height: 18%;
+        margin-top: 10px;
+        border-radius: 15px;
+        font-size: 25px;
+
+    }
+
+    #loginButton1,
+    #registerButton {
+        border-radius: 15px;
+        width: 80%;
+        height: 18%;
+        font-size: 25px;
+        margin-top: 10px;
+        margin-left: 12%;
+    }
+
+    #googleLoginBtnG,
+    #googleRegisterBtn {
+        width: 80%;
+        height: 18%;
+        border-radius: 15px;
+        font-size: 25px;
+        background-size: 70px;
+        background-position: 95px;
+        margin-top: 20px;
+    }
+
+    #registerLink1,
+    #backToLoginBtn {
+        border-radius: 15px;
+        width: 80%;
+        height: 18%;
+        font-size: 21px;
+        margin-top: 9px;
+    }
+
+    #registerBox {
+        padding: 2rem 1rem 2rem 1rem;
+        margin-top: 20px;
+        margin-left: 30px;
+        margin-right: 30px;
+        height: 40rem;
+    }
+
+    #nameInput,
+    #lastNameInput,
+    #emailInput,
+    #passInput {
+        padding: 8px 8px 8px 25px;
+        width: 85%;
+        height: 15%;
+        margin-top: 10px;
+        font-size: 25px;
+        margin-bottom: 14px;
+        border-radius: 15px;
+        margin-left: 60px;
+        margin-right: 60px;
+
+    }
+
+}
