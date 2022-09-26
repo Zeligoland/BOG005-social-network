@@ -22,7 +22,7 @@ body {
 p {
     color: white;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 120px;
     font-family: 'DM Mono';
     font-size: 14px;
     margin-left: 25px;
@@ -47,11 +47,12 @@ button {
 }
 
 
-#sectioni {
+#sectioni,
+#registerBox {
     margin-bottom: 17px;
     background-color: #F1E0D6;
     border-radius: 10px;
-    margin-top: 20px;
+    margin-top: 55px;
     margin-left: 30px;
     margin-right: 30px;
     height: 16rem;
@@ -61,7 +62,7 @@ button {
 #passwordLogin {
     padding: 8px 8px 8px 25px;
     width: 240px;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 15px;
     border-radius: 5px; 
     background-color: white;
@@ -71,15 +72,15 @@ button {
     color: #595775;
 }
 
-#registerBox {
-    margin-bottom: 10px;
+/*#registerBox {
+    margin-bottom: 17px;
     background-color: #F1E0D6;
     border-radius: 10px;
-    margin-top: 20px;
+    margin-top: 60px;
     margin-left: 30px;
     margin-right: 30px;
-    height: 24rem;
-}
+    height: 20rem;
+}*/
 
 #nameInput, 
 #lastNameInput, 
@@ -114,9 +115,10 @@ button {
     font-family: 'DM Mono', medium;
     font-size: 13px;
     margin-top: 1px;
+    cursor: pointer;
 }
 
-#googleLoginBtnG, 
+/*#googleLoginBtnG, 
 #googleRegisterBtn {
     width: 240px;
     height: 29px;
@@ -124,7 +126,7 @@ button {
     margin-left: 40px;
     border-radius: 10px;
     font-size: 14px;
-    font-family: 'DM Mono', medium;
+    font-family: 'Roboto', medium;
     color: #595775;
     background-image: url(img/btn_google_light_normal_ios.png);
     background-repeat: no-repeat;
@@ -134,6 +136,26 @@ button {
     background-color: white;
     color: 0,0,0 (54%);
     margin-top: 10px;
+}*/
+
+#googleLoginBtnG, 
+#googleRegisterBtn {
+    width: 240px;
+    height: 29px;
+    padding: 6px;
+    margin-left: 40px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #595775;
+    background-image: url(img/btn_google_signin_light_normal_web.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    border: none;
+    background-color: white;
+    color: 0,0,0 (54%);
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 #registerLink1,
@@ -151,11 +173,16 @@ button {
     margin-top: 9px;
     border: none;
     color: black;
+    cursor: pointer;
 }
 
 #diversityImage {
     width: 100%;
     margin-top: 1rem;
     bottom: 0;
+}
+
+#error-paragraph {
+    margin-top: 10px;
 }
 

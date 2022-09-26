@@ -1,4 +1,5 @@
 import { onNavigate } from "../main.js";
+import { createUser, popupGoogle } from "../lib/auth.js";
 
 export const Register = () => {
   // esta función estará disponible en el main
@@ -7,12 +8,6 @@ export const Register = () => {
   const registerSection = document.createElement("section");
   registerSection.setAttribute("id", "registerBox");
   const welcomeTitle = document.createElement("p");
-  const nameRequest = document.createElement("input");
-  nameRequest.setAttribute("placeholder", "Nombres");
-  nameRequest.setAttribute("id", "nameInput");
-  const lastNameRequest = document.createElement("input");
-  lastNameRequest.setAttribute("placeholder", "Apellidos");
-  lastNameRequest.setAttribute("id", "lastNameInput");
   const emailRequest = document.createElement("input");
   emailRequest.setAttribute("placeholder", "Correo Electrónico");
   emailRequest.setAttribute("id", "emailInput");
@@ -23,7 +18,7 @@ export const Register = () => {
   button.textContent = "Registrarme";
   button.setAttribute("id", "registerButton");
   const googleRegisterBtn = document.createElement("button");
-  googleRegisterBtn.textContent = "Continua con Google";
+  //googleRegisterBtn.textContent = "Continua con Google";
   googleRegisterBtn.setAttribute("id", "googleRegisterBtn");
   const backButton = document.createElement("button");
   backButton.textContent = "¿Ya tienes una cuenta? ¡Ingresa aquí!";
@@ -34,21 +29,56 @@ export const Register = () => {
 
   welcomeTitle.textContent = "Aquí puedes registrarte rápido y facil.";
 
-
+  const errorNotice = document.createElement("p");
+  errorNotice.setAttribute("id", "error-paragraph")
 
   registerSection.append(
-    nameRequest,
-    lastNameRequest,
     emailRequest,
     passwordRequest,
     button,
     googleRegisterBtn,
-    backButton
+    backButton,
+    errorNotice
   );
 
   backButton.addEventListener("click", () => {
     onNavigate("/");
   });
+
+   // Escuchador botón google
+   googleRegisterBtn.addEventListener("click", () => {
+    popupGoogle()
+    .then(() => {
+      onNavigate("/wall");
+    });
+  });
+
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    const signupEmail = emailRequest.value;
+    const signupPassword = passwordRequest.value;
+
+    createUser(signupEmail, signupPassword)
+    .then (() => {
+      onNavigate("/wall");
+    })
+    .catch((error) => {
+      const usedEmail = "Email en uso, inicie sesión";
+      const shortPasword = "La contraseña debe ser minimo de 6 caracteres";
+      const invalidEmail = "Ingrese un email valido";
+      const missingEmail = "Escriba un email";
+
+      if (error.code === "auth/invalid-email"){
+        errorNotice.innerText = invalidEmail;
+      } else if (error.code === "auth/email-alredy-in-use"){
+        errorNotice.innerText = usedEmail;
+      } else if (error.code === "auth/missing-email"){
+        errorNotice.innerText = missingEmail;
+      } else if (error.code === "auth/weak-password"){
+        errorNotice.innerText = shortPasword;
+      }
+      });
+    }); 
 
   div.append(
     welcomeTitle,
