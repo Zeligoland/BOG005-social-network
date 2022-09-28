@@ -10,6 +10,7 @@ export const Welcome = () => {
   const header = document.createElement("header");
   header.className = "header";
   const nameApp = document.createElement("section");
+<<<<<<< HEAD
   nameApp.className = "logo;";
   const welcomeTitle = document.createElement("p");
   welcomeTitle.textContent =
@@ -18,6 +19,14 @@ export const Welcome = () => {
   infoTitle.className = "welcomeMessage";
   infoTitle.textContent =
     "Si eres migrante en Colombia, no conoces muchas personas y deseas conocer más, este es el lugar indicado.";
+=======
+  nameApp.className = "logo;"
+  const welcomeTitle = document.createElement("p");
+  welcomeTitle.textContent = "¡Bienvenid@ a  la app donde podrás ampliar tu red de apoyo!";
+  const infoTitle = document.createElement("p");
+  infoTitle.className = "welcomeMessage";
+  infoTitle.textContent = "Si eres migrante en Colombia, no conoces muchas personas y deseas conocer más, este es el lugar indicado.";
+>>>>>>> 2f5312e (Adjustments Trying to run DOM Test)
   const welcomeImage = document.createElement("img");
   welcomeImage.setAttribute("src", "./img/cultural-diversity.png");
   welcomeImage.setAttribute("id", "diversityImage");
@@ -27,10 +36,17 @@ export const Welcome = () => {
   const sectioni = document.createElement("section");
   sectioni.setAttribute("id", "sectioni");
   const emailInput = document.createElement("input");
+<<<<<<< HEAD
   emailInput.setAttribute("requiered", "");
   emailInput.setAttribute("placeholder", "Correo electrónico");
   emailInput.setAttribute("id", "emailLogin");
   emailInput.textContent = "Ingresa tu e-mail";
+=======
+  emailInput.setAttribute("requiered", "")
+  emailInput.setAttribute("placeholder", "Correo electrónico")
+  emailInput.setAttribute("id", "emailLogin")
+  emailInput.textContent = "Ingresa tu e-mail"
+>>>>>>> 2f5312e (Adjustments Trying to run DOM Test)
   const passInput = document.createElement("input");
 <<<<<<< HEAD
   passInput.setAttribute("requiered", "")
@@ -45,13 +61,21 @@ export const Welcome = () => {
   passInput.textContent = "Ingresa tu contraseña";
 >>>>>>> 6537cb0 (Dando formato y haciendo ajustes para tests)
   const loginButton = document.createElement("button");
+<<<<<<< HEAD
   loginButton.setAttribute("id", "loginButton1");
+=======
+  loginButton.setAttribute("id", "loginButton1")
+>>>>>>> 2f5312e (Adjustments Trying to run DOM Test)
   loginButton.textContent = "Entrar";
   const googleLoginBtn = document.createElement("button");
   googleLoginBtn.setAttribute("id", "googleLoginBtnG");
   //googleLoginBtn.textContent = "Ingresa con Google";
   const registerLink = document.createElement("button");
+<<<<<<< HEAD
   registerLink.setAttribute("id", "registerLink1");
+=======
+  registerLink.setAttribute("id", "registerLink1")
+>>>>>>> 2f5312e (Adjustments Trying to run DOM Test)
   registerLink.textContent = "¿No tienes una cuenta? ¡Puedes crearla aquí!";
 
 <<<<<<< HEAD
@@ -74,8 +98,42 @@ export const Welcome = () => {
     onNavigate("/register");
   });
 
+  // Escuchador botón google
+  googleLoginBtn.addEventListener("click", () => {
+    popupGoogle()
+    .then(() => {
+      onNavigate("/wall");
+    });
+  });
+
+  //Escuchador boton login
+  loginButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    const loginEmail = emailInput.value;
+    const loginPassword = passInput.value;
+    signInUser(loginEmail, loginPassword)
+    .then(() => {
+      onNavigate("/wall");
+    })
+    .catch((error) => {
+      const userNotFound = "Este email no está registrado";
+      const wrongPassword = "Clave equivocada, intente de nuevo";
+      const invalidEmail = "Correo invalido, revise la información suministrada";
+      const enterPassword = "Por favor ingrese la contraseña";
+
+      if (error.code === "auth/invalid-email"){
+        errorNotice.innerText = invalidEmail;
+      } else if (error.code === "auth/wrong-password"){
+        errorNotice.innerText = wrongPassword;
+      } else if (error.code === "auth/user-not-found"){
+        errorNotice.innerText = userNotFound;
+      } else if (error.code === "auth/internal-error"){
+        errorNotice.innerText = enterPassword;
+      }
+      });
+    });
+
   div.append(header, sectioni, welcomeImage);
 
   return div;
 };
-
