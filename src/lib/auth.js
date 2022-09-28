@@ -27,4 +27,3 @@ const firebaseConfig = {
   export const createUser = (email, password) => createUserWithEmailAndPassword(auth, email, password);
   export const popupGoogle = () => signInWithPopup(auth, provider);
   export const signInUser = (email, password) => signInWithEmailAndPassword(auth, email, password);
-

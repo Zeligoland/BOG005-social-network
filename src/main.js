@@ -16,7 +16,11 @@ const routes = {
 // la ruta como parte del título y el dominio en el cual estamos más la ruta
 // esta función onNavigate tiene la tarea de trabajar para la navegación
 export const onNavigate = (pathname) => {
-  window.history.pushState({}, pathname, window.location.origin + pathname);
+  window.history.pushState(
+    {}, 
+    pathname, 
+    window.location.origin + pathname,
+    );
   root.removeChild(root.firstChild);
   root.appendChild(routes[pathname]());
 };
