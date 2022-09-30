@@ -7,12 +7,28 @@ export const Wall = () => {
 
     const header = document.createElement("header");
     header.className = "header";
-    const welcomeTitle = document.createElement("p");
-    welcomeTitle.textContent = "¡Bienvenid@ a  la app donde podrás ampliar tu red de apoyo!";
+    const welcomeWall = document.createElement("p");
+    welcomeWall.setAttribute("id", "welcomeWall")
+    welcomeWall.textContent = "¡Comencemos a crear redes de apoyo!";
+    const backButtonWall = document.createElement("button");
+    backButtonWall.setAttribute("id", "backButton1");
+    backButtonWall.textContent = "Salir";
 
-    header.append(welcomeTitle);
+    header.append(backButtonWall, welcomeWall);
+    
+    const sectionPost = document.createElement("section");
+    sectionPost.setAttribute("id", "sectionPost");
+    const postElement = document.createElement("textarea");
+    postElement.setAttribute("id", "postContent");
+    postElement.setAttribute("placeholder", "¿Que quieres decir/publicar?");
+    const postButton = document.createElement("button");
+    postButton.setAttribute("id", "postButton1");
+    postButton.textContent = "Publicar";
 
-    div.append(header);
+    sectionPost.append(postElement, postButton);
+
+
+    div.append(header, sectionPost);
 
     return div;
 };

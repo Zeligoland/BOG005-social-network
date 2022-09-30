@@ -14,6 +14,7 @@ export const Register = () => {
   const passwordRequest = document.createElement("input");
   passwordRequest.setAttribute("placeholder", "Contraseña");
   passwordRequest.setAttribute("id", "passInput");
+  passwordRequest.setAttribute("type", "password");
   const button = document.createElement("button");
   button.textContent = "Registrarme";
   button.setAttribute("id", "registerButton");
