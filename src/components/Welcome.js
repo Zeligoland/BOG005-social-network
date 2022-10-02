@@ -10,23 +10,12 @@ export const Welcome = () => {
   const header = document.createElement("header");
   header.className = "header";
   const nameApp = document.createElement("section");
-<<<<<<< HEAD
-  nameApp.className = "logo;";
-  const welcomeTitle = document.createElement("p");
-  welcomeTitle.textContent =
-    "¡Bienvenid@ a  la app donde podrás ampliar tu red de apoyo!";
-  const infoTitle = document.createElement("p");
-  infoTitle.className = "welcomeMessage";
-  infoTitle.textContent =
-    "Si eres migrante en Colombia, no conoces muchas personas y deseas conocer más, este es el lugar indicado.";
-=======
   nameApp.className = "logo;"
   const welcomeTitle = document.createElement("p");
   welcomeTitle.textContent = "¡Bienvenid@ a  la app donde podrás ampliar tu red de apoyo!";
   const infoTitle = document.createElement("p");
   infoTitle.className = "welcomeMessage";
   infoTitle.textContent = "Si eres migrante en Colombia, no conoces muchas personas y deseas conocer más, este es el lugar indicado.";
->>>>>>> 2f5312e (Adjustments Trying to run DOM Test)
   const welcomeImage = document.createElement("img");
   welcomeImage.setAttribute("src", "./img/cultural-diversity.png");
   welcomeImage.setAttribute("id", "diversityImage");
@@ -36,64 +25,31 @@ export const Welcome = () => {
   const sectioni = document.createElement("section");
   sectioni.setAttribute("id", "sectioni");
   const emailInput = document.createElement("input");
-<<<<<<< HEAD
-  emailInput.setAttribute("requiered", "");
-  emailInput.setAttribute("placeholder", "Correo electrónico");
-  emailInput.setAttribute("id", "emailLogin");
-  emailInput.textContent = "Ingresa tu e-mail";
-=======
   emailInput.setAttribute("requiered", "")
   emailInput.setAttribute("placeholder", "Correo electrónico")
   emailInput.setAttribute("id", "emailLogin")
   emailInput.textContent = "Ingresa tu e-mail"
->>>>>>> 2f5312e (Adjustments Trying to run DOM Test)
   const passInput = document.createElement("input");
-<<<<<<< HEAD
   passInput.setAttribute("requiered", "")
   passInput.setAttribute("placeholder", "Contraseña");
   passInput.setAttribute("id", "passwordLogin");
   passInput.setAttribute("type", "password");
   passInput.textContent = "Ingresa tu contraseña"
-=======
-  passInput.setAttribute("requiered", "");
-  passInput.setAttribute("placeholder", "Contraseña");
-  passInput.setAttribute("id", "passwordLogin");
-  passInput.textContent = "Ingresa tu contraseña";
->>>>>>> 6537cb0 (Dando formato y haciendo ajustes para tests)
   const loginButton = document.createElement("button");
-<<<<<<< HEAD
-  loginButton.setAttribute("id", "loginButton1");
-=======
   loginButton.setAttribute("id", "loginButton1")
->>>>>>> 2f5312e (Adjustments Trying to run DOM Test)
   loginButton.textContent = "Entrar";
   const googleLoginBtn = document.createElement("button");
   googleLoginBtn.setAttribute("id", "googleLoginBtnG");
   //googleLoginBtn.textContent = "Ingresa con Google";
   const registerLink = document.createElement("button");
-<<<<<<< HEAD
-  registerLink.setAttribute("id", "registerLink1");
-=======
   registerLink.setAttribute("id", "registerLink1")
->>>>>>> 2f5312e (Adjustments Trying to run DOM Test)
   registerLink.textContent = "¿No tienes una cuenta? ¡Puedes crearla aquí!";
 
-<<<<<<< HEAD
   const errorNotice = document.createElement("p");
   errorNotice.setAttribute("id", "error-paragraph")
 
   sectioni.append(emailInput, passInput, loginButton, googleLoginBtn, registerLink, errorNotice);
 
-=======
-  sectioni.append(
-    emailInput,
-    passInput,
-    loginButton,
-    googleLoginBtn,
-    registerLink
-  );
-
->>>>>>> 6537cb0 (Dando formato y haciendo ajustes para tests)
   registerLink.addEventListener("click", () => {
     onNavigate("/register");
   });
