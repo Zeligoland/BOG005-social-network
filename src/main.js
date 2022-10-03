@@ -15,7 +15,7 @@ const routes = {
 // funcion on navigate recibe la ruta, después utiliza el obj window.history, avienta el push state, que requiere un estado (vacio)
 // la ruta como parte del título y el dominio en el cual estamos más la ruta
 // esta función onNavigate tiene la tarea de trabajar para la navegación
-export const onNavigate = (pathname) => {
+export const onNavigate = (pathname, paramRoutes = routes) => {
   window.history.pushState(
     {}, 
     pathname, 
