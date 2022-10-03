@@ -11,18 +11,28 @@
 }
 
 body {
-    background-color: #595775;
+background-color: #595775;
     max-width: 100%;
-    background-image: url(img/migroredlogo.png);
-    background-position: top;
     background-repeat: no-repeat;
     background-size: 340px;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#migroredlogo {
+    width: 75%;
+    margin-top: -3.5rem;
+}
+
+
 p {
     color: white;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 1rem;
     font-family: 'DM Mono';
     font-size: 14px;
     margin-left: 25px;
@@ -39,21 +49,21 @@ p {
     margin-right: 25px;
 }
 
-button {
+/* button {
     background-color: aliceblue;
     margin-top: 30px;
     justify-content: center;
     text-align: center;
-}
+} */
 
 
 #sectioni {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 17px;
     background-color: #F1E0D6;
     border-radius: 10px;
-    margin-top: 20px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-top: 6px;
     height: 16rem;
 }
 
@@ -72,23 +82,24 @@ button {
 }
 
 #registerBox {
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 17px;
     background-color: #F1E0D6;
     border-radius: 10px;
-    margin-top: 20px;
-    margin-left: 30px;
-    margin-right: 30px;
-    height: 24rem;
+    margin-top: 6px;
+    /* margin-right: 2rem;
+    margin-left: 2rem; */
+    height: 16rem;
+    /* margin-top: 6px; */
 }
 
-#nameInput,
-#lastNameInput,
 #emailInput,
 #passInput {
-    padding: 8px 8px 8px 25px;
+    padding: 4px 8px 6px 25px;
     width: 240px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 30px;
+    margin-bottom: 6px;
     border-radius: 5px;
     background-color: white;
     border: none;
@@ -102,6 +113,10 @@ button {
     margin-top: 1px;
 }
 
+#passInput {
+    margin-top: 1px;
+}
+
 #loginButton1,
 #registerButton {
     padding: 6px;
@@ -109,7 +124,7 @@ button {
     border-radius: 5px;
     color: white;
     width: 240px;
-    margin-right: 50px;
+    /* margin-right: 50px; */
     margin-left: 40px;
     font-family: 'DM Mono', medium;
     font-size: 13px;
@@ -155,51 +170,45 @@ button {
 
 #diversityImage {
     width: 100%;
-    margin-top: 0rem;
-    bottom: 0;
+    margin-bottom: -2rem;
 }
 
 /* #postArea VISTA MURO{
      background-color: blue;
 } */
 
-
-
-/*aplicando media querys tablet 760px*/
+/* aplicando Quarys Selectors Tablet 760px */
 @media (min-width: 760px) {
-    #sectioni {
-        padding: 1.5rem 0rem 1rem 0rem;
+
+    sectioin,
+    #registerBox {
+        padding: 3rem 1rem 1rem 0rem;
         display: flex;
-        justify-content: center;
         flex-direction: column;
         align-items: center;
-        height: 27rem;
-        margin-block-end: auto;
-        /* width: fit-content; */
+        height: 37rem;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 
     #diversityImage {
         margin-top: 1.5rem;
-        /* position: absolute;
-        bottom: 0%; */
     }
 
-    p {
-        font-size: 25px;
-    }
-
+    p,
     .welcomeMessage {
         font-size: 25px;
     }
 
     #emailLogin,
-    #passwordLogin {
+    #passwordLogin,
+    #emailInput,
+    #passInput {
         width: 80%;
         height: 18%;
         margin-top: 10px;
         border-radius: 15px;
         font-size: 25px;
-
     }
 
     #loginButton1,
@@ -209,7 +218,7 @@ button {
         height: 18%;
         font-size: 25px;
         margin-top: 10px;
-        margin-left: 12%;
+        margin-left: 14%;
     }
 
     #googleLoginBtnG,
@@ -228,32 +237,49 @@ button {
         border-radius: 15px;
         width: 80%;
         height: 18%;
-        font-size: 21px;
-        margin-top: 9px;
+        font-size: 22px;
+        margin: 1rem 1rem -5rem 1rem;
     }
 
-    #registerBox {
-        padding: 2rem 1rem 2rem 1rem;
-        margin-top: 20px;
-        margin-left: 30px;
-        margin-right: 30px;
-        height: 40rem;
-    }
+    /* Aplicando Quarys Selectors para Laptop */
+    @media (min-width: 1020px) {
 
-    #nameInput,
-    #lastNameInput,
-    #emailInput,
-    #passInput {
-        padding: 8px 8px 8px 25px;
-        width: 85%;
-        height: 15%;
-        margin-top: 10px;
-        font-size: 25px;
-        margin-bottom: 14px;
-        border-radius: 15px;
-        margin-left: 60px;
-        margin-right: 60px;
+        #sectioni,
+        #registerBox {
+            padding: 1rem 2rem 1rem 0rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 18rem;
+            margin-top: 5rem;
+            margin-left: 30%;
+            margin-right: 64%;
+        }
 
+        #diversityImage {
+            width: 45%;
+            margin-left: 22rem;
+            margin-top: 0rem;
+            position: absolute;
+        }
+
+        p,
+        .welcomeMessage {
+            font-size: 23px;
+            margin-top: 3rem;
+        }
+
+        #loginButton1,
+        #registerButton {
+            border-radius: 15px;
+            height: 16%;
+            margin-left: 26%;
+        }
+
+        #migroredlogo {
+            width: 30%;
+            margin: -0.8rem 1rem -2rem 1rem;
+        }
     }
 
 }

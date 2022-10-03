@@ -26,6 +26,9 @@ export const Register = () => {
   const welcomeImg = document.createElement("img");
   welcomeImg.setAttribute("src", "./img/cultural-diversity.png");
   welcomeImg.setAttribute("id", "diversityImage");
+  const imgLogo = document.createElement("img");
+  imgLogo.setAttribute("src", "./img/migroredlogo.png");
+  imgLogo.setAttribute("id", "migroredlogo");
 
   welcomeTitle.textContent = "Aquí puedes registrarte rápido y facil.";
 
@@ -81,6 +84,7 @@ export const Register = () => {
     }); 
 
   div.append(
+    imgLogo,
     welcomeTitle,
     registerSection,
     welcomeImg
