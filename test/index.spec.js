@@ -1,4 +1,6 @@
-import {onNavigate} from '../src/main';
+import {onNavigate} from '../src/main.js';
+
+jest.mock('../src/lib/utils.js')
 
 const mockTemplateLogin = () => {
   const loginContainer = document.createElement('div');

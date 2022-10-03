@@ -10,7 +10,10 @@ export const Welcome = () => {
   const header = document.createElement("header");
   header.className = "header";
   const nameApp = document.createElement("section");
-  nameApp.className = "logo;"
+  nameApp.className = "logo"
+  const logo = document.createElement("img");
+  logo.setAttribute("src", "./img/migroredlogo.png");
+  logo.setAttribute("id","migroRedLogo");
   const welcomeTitle = document.createElement("p");
   welcomeTitle.textContent = "¡Bienvenid@ a  la app donde podrás ampliar tu red de apoyo!";
   const infoTitle = document.createElement("p");
@@ -20,7 +23,7 @@ export const Welcome = () => {
   welcomeImage.setAttribute("src", "./img/cultural-diversity.png");
   welcomeImage.setAttribute("id", "diversityImage");
 
-  header.append(nameApp, welcomeTitle, infoTitle);
+  header.append(logo, nameApp, welcomeTitle, infoTitle);
 
   const sectioni = document.createElement("section");
   sectioni.setAttribute("id", "sectioni");

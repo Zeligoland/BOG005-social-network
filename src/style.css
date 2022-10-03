@@ -13,10 +13,13 @@
 body {
     background-color: #595775;
     max-width: 100%;
-    background-image: url(img/migroredlogo.png);
     background-position: top;
     background-repeat: no-repeat;
     background-size: 340px;
+}
+
+#migroRedLogo{
+    width: 300px;
 }
 
 p {
@@ -117,26 +120,6 @@ button {
     margin-top: 1px;
     cursor: pointer;
 }
-
-/*#googleLoginBtnG, 
-#googleRegisterBtn {
-    width: 240px;
-    height: 29px;
-    padding: 6px;
-    margin-left: 40px;
-    border-radius: 10px;
-    font-size: 14px;
-    font-family: 'Roboto', medium;
-    color: #595775;
-    background-image: url(img/btn_google_light_normal_ios.png);
-    background-repeat: no-repeat;
-    background-size: 29px;
-    background-position: -1px;
-    border: none;
-    background-color: white;
-    color: 0,0,0 (54%);
-    margin-top: 10px;
-}*/
 
 #googleLoginBtnG, 
 #googleRegisterBtn {
@@ -277,4 +260,172 @@ button {
     background-color: #595775;
     color: white;
     font-family: 'DM Mono', mixed;
+}
+
+@media (min-width: 1024px) {
+    body {
+        background-color: #595775;
+        max-width: 100%;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: 340px;
+    }
+
+    .header{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #migroRedLogo{
+        margin: 0;
+    }
+    
+    p {
+        /*color: white;
+        text-align: center;
+        margin-top: 100px;
+        font-family: 'DM Mono';
+        
+        margin-left: 25px;
+        margin-right: 25px;*/
+        font-size: 16px;
+        width: 60%;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;  
+
+    }
+    
+    .welcomeMessage {
+        /*color: white;
+        text-align: center;
+        margin-top: 30px;
+        font-family: 'DM Mono';
+        font-size: 16px;
+        margin-left: 25px;
+        margin-right: 25px;*/
+        font-size: 16px;
+        width: 60%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    button {
+        background-color: aliceblue;
+        margin-top: 30px;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    
+    #sectioni,
+    #registerBox {
+        position: relative;
+        left: 64%;
+        margin-bottom: 17px;
+        background-color: #F1E0D6;
+        border-radius: 10px;
+        margin-top: 55px;
+        height: 260px;
+        width: 323px;
+
+    }
+    
+    #emailLogin, 
+    #passwordLogin {
+        padding: 8px 8px 8px 25px;
+        width: 240px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        border-radius: 5px; 
+        background-color: white;
+        border: none;
+        margin-left: 40px;
+        font-family: 'DM Mono';
+        color: #595775;
+    }
+
+#emailInput, 
+#passInput {
+    padding: 8px 8px 8px 25px;
+    width: 240px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px; 
+    background-color: white;
+    border: none;
+    margin-left: 40px;
+    font-family: 'DM Mono';
+    color: #595775;
+}
+
+
+#passwordLogin {
+    margin-top: 1px; 
+}
+
+#loginButton1,
+#registerButton {
+    padding: 6px;
+    background-color: #595775;
+    border-radius: 5px;
+    color: white;
+    width: 240px;
+    margin-right: 50px;
+    margin-left: 40px;
+    font-family: 'DM Mono', medium;
+    font-size: 13px;
+    margin-top: 1px;
+    cursor: pointer;
+}
+
+#googleLoginBtnG, 
+#googleRegisterBtn {
+    width: 240px;
+    height: 29px;
+    padding: 6px;
+    margin-left: 40px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #595775;
+    background-image: url(img/btn_google_signin_light_normal_web.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    border: none;
+    background-color: white;
+    color: 0,0,0 (54%);
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#registerLink1,
+#backToLoginBtn {
+    background-color: #F1E0D6;
+    border-radius: 5px;
+    color: white;
+    width: 210px;
+    height: 40px;
+    margin-right: 50px;
+    margin-left: 55px;
+    font-family: 'DM Mono', mixed;
+    font-size: 14px;
+    box-shadow:black;
+    margin-top: 10px;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+#diversityImage {
+    width: 70%;
+    margin-top: 1rem;
+    bottom: 0;
+}
+
+#error-paragraph {
+    margin-top: 10px;
+}
+    
+
 }
