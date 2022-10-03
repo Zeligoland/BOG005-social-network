@@ -16,7 +16,7 @@ export const Wall = () => {
     backButtonWall.textContent = "Salir";
 
     header.append(backButtonWall, welcomeWall);
-    
+
     const sectionPost = document.createElement("section");
     sectionPost.setAttribute("id", "sectionPost");
     const postElement = document.createElement("textarea");
@@ -26,7 +26,11 @@ export const Wall = () => {
     const postButton = document.createElement("button");
     postButton.setAttribute("id", "postButton1");
     postButton.textContent = "Publicar";
+    const buttonLike = document.createElement("button");
+    buttonLike.setAttribute("id", "buttonLike1");
+    buttonLike.textContent = "Like";
 
+    sectionPost.append(postElement, buttonLike);
     sectionPost.append(postElement, postButton);
 
     const posters = document.createElement("section");
@@ -37,11 +41,11 @@ export const Wall = () => {
     posters.append(postComplete);
 
     backButtonWall.addEventListener("click", () => {
-    onNavigate("/");
+        onNavigate("/");
     });
 
     window.addEventListener("DOMContentLoaded", async () => {
-        
+
         onGetTasks((querySnapshot) => {
             let html = "";
 
@@ -53,13 +57,13 @@ export const Wall = () => {
                         <button class="btn-delete" data-id="${doc.id}">Borrar</button>
                     </div>
                  `;
-             });
+            });
             postComplete.innerHTML = html;
 
             const btnsDelete = postComplete.querySelectorAll(".btn-delete");
-            
+
             btnsDelete.forEach(btn => {
-                btn.addEventListener("click", ({target: {dataset}}) => {
+                btn.addEventListener("click", ({ target: { dataset } }) => {
                     deleteTask(dataset.id);
                 });
             });
@@ -69,11 +73,11 @@ export const Wall = () => {
     postButton.addEventListener("click", (e) => {
         e.preventDefault();
 
-       const post =  postElement;
+        const post = postElement;
 
-       saveTask(postElement.value);
+        saveTask(postElement.value);
 
-        postElement.value = ""; 
+        postElement.value = "";
     });
 
     div.append(header, sectionPost, postComplete);
