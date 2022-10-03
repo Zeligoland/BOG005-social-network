@@ -36,6 +36,7 @@ export const Welcome = () => {
   passInput.setAttribute("requiered", "")
   passInput.setAttribute("placeholder", "Contraseña");
   passInput.setAttribute("id", "passwordLogin");
+  passInput.setAttribute("type", "password");
   passInput.textContent = "Ingresa tu contraseña"
   const loginButton = document.createElement("button");
   loginButton.setAttribute("id", "loginButton1")
@@ -95,4 +96,3 @@ export const Welcome = () => {
 
   return div;
 };
-
