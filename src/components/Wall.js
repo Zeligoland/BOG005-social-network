@@ -11,7 +11,7 @@ export const Wall = () => {
     const welcomeWall = document.createElement("p");
     welcomeWall.setAttribute("id", "welcomeWall")
     welcomeWall.textContent = "¡Comencemos a crear redes de apoyo!";
-    const backButtonWall = document.createElement("button");
+    const backButtonWall    = document.createElement("button");
     backButtonWall.setAttribute("id", "backButton1");
     backButtonWall.textContent = "Salir";
 
@@ -30,9 +30,9 @@ export const Wall = () => {
     sectionPost.append(postElement, postButton);
 
     const posters = document.createElement("section");
-    posters.setAttribute("id", "posters");
+    posters.setAttribute("class", "posters");
     const postComplete = document.createElement("section");
-    postComplete.setAttribute("id", "postComplete");
+    postComplete.setAttribute("class", "postComplete");
 
     posters.append(postComplete);
 
@@ -49,8 +49,13 @@ export const Wall = () => {
                 const task = doc.data();
                 html += `
                     <div>
+                        <section class="postBox">
+                        <br>
+                        <section class="post">
                         <h3>${task.postElement}</h3>
+                        </section>
                         <button class="btn-delete" data-id="${doc.id}">Borrar</button>
+                        </section>
                     </div>
                  `;
              });
