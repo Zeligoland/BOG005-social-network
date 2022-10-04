@@ -1,13 +1,12 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-
 //Importamos las funciones AUTH 
 import { 
+    initializeApp,
     getAuth,
     createUserWithEmailAndPassword,
     GoogleAuthProvider,
     signInWithPopup,
     signInWithEmailAndPassword,
- } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+ } from "./utils.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyAjKkyDbHluBqhq8ZVzEkc1vb231KCN8os",

@@ -1,30 +1,38 @@
-import {onNavigate} from '../src/main';
+import {onNavigate} from '../src/main.js';
 
-const mockTemplateLogin = () => {
-  const loginContainer = document.createElement('div');
-  loginContainer.innerHTML = '<h1>Mock Template Login</h1>'
-  return loginContainer
-}
+jest.mock('../src/lib/utils.js')
 
-const mockTemplateRegister = () => {
-  const registerContainer = document.createElement('div');
-  registerContainer.innerHTML = '<h1>Mock Template register 1</h1>'
-  return registerContainer
-}
+describe('OnNavigate es una función', () => {
+  test ("Deberia ser una funcion",()=>{
+    expect(typeof onNavigate).toBe('function');
+  })  
+})
 
-const mockRoutes = {
-  '/login': mockTemplateLogin(),
-  '/register': mockTemplateRegister(),
-}
+ const mockTemplateLogin = () => {
+   const loginContainer = document.createElement('div');
+   loginContainer.innerHTML = '<h1>Mock Template Login</h1>'
+   return loginContainer
+ }
 
+ const mockTemplateRegister = () => {
+   const registerContainer = document.createElement('div');
+   registerContainer.innerHTML = '<h1>Mock Template register 1</h1>'
+   return registerContainer
+ }
+
+ const mockRoutes = {
+   '/login': mockTemplateLogin(),
+   '/register': mockTemplateRegister(),
+ }
 
 describe('onNavigate', () => {
-  it ('test de onNavigate', () => {
-    document.body.innerHTML = '<div id="root"></div>'
+   it ('test de onNavigate', () => {
+   document.body.innerHTML = '<div id="root"></div>'
     onNavigate('/login', mockRoutes)
-    console.log('contenido: ', document.getElementById('root').textContent);
-    expect(document.getElementById('root').textContent).toEqual('Mock Template Login 1')
-  })
+     console.log('contenido: ', document.getElementById('root').textContent);
+     expect(document.getElementById('root').textContent).toEqual('Mock Template Login 1')
+   })
+
   it('test de onNavigate', () => {
     document.body.innerHTML = '<div id="root"></div>'
     onNavigate('/register', mockRoutes)

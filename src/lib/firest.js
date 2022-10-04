@@ -1,5 +1,5 @@
 import { app } from "../lib/auth.js";
-import { getFirestore, collection, addDoc, getDocs, deleteDoc, onSnapshot, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
+import { getFirestore, collection, addDoc, getDocs, deleteDoc, onSnapshot, doc, getDoc } from "./utils.js";
 
 const db = getFirestore(app);
 
