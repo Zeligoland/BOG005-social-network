@@ -51,6 +51,7 @@ export const Wall = () => {
                     <div>
                         <section class="postBox">
                         <br>
+                        <button class="btn-edit" data-id="${doc.id}"></button>
                         <section class="post">
                         <h3>${task.postElement}</h3>
                         </section>
@@ -68,6 +69,19 @@ export const Wall = () => {
                     deleteTask(dataset.id);
                 });
             });
+
+            const btnsEdit = postComplete.querySelectorAll(".btn-edit");
+            const taskForm = document.getElementById("postContent");
+            let editStatus = false;
+
+            btnsEdit.forEach((btn) => {
+                btn.addEventListener("click", async (e) => {
+                    const doc = await getTask(e.target.dataset.id);
+                    const task = doc.data();
+
+                    taskForm.value = task.postElement;
+                })
+            })
         });
     });
 
