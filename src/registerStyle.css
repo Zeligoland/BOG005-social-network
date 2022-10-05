@@ -1,0 +1,19 @@
+@media (min-width: 1024px) {
+
+    #migroRedLogoR {
+        width: 300px;
+    }
+
+    #registerBox {
+        position: relative;
+        left: 56%;
+        margin-bottom: 17px;
+        background-color: #F1E0D6;
+        border-radius: 10px;
+        margin-top: -294px;
+        height: 390px;
+        width: 390px;
+    }
+
+    
+}

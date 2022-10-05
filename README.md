@@ -1,4 +1,4 @@
-# Creando una Red Social
+# Social Network - MigroRed
 
 ## Índice
 

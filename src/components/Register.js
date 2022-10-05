@@ -7,6 +7,9 @@ export const Register = () => {
 
   const registerSection = document.createElement("section");
   registerSection.setAttribute("id", "registerBox");
+  const logo = document.createElement("img");
+  logo.setAttribute("src", "./img/migroredlogo.png");
+  logo.setAttribute("id","migroRedLogoR");
   const welcomeTitle = document.createElement("p");
   const emailRequest = document.createElement("input");
   emailRequest.setAttribute("placeholder", "Correo Electrónico");
@@ -82,6 +85,7 @@ export const Register = () => {
     }); 
 
   div.append(
+    logo,
     welcomeTitle,
     registerSection,
     welcomeImg

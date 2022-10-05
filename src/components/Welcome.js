@@ -6,8 +6,7 @@ export const Welcome = () => {
   // esta función estará disponible en el main
   const div = document.createElement("div");
   div.className = "container";
-  const display = document.createElement("div");
-  display.setAttribute("id", "welcomeAndConnect");
+ 
 
   const header = document.createElement("header");
   header.className = "header";
@@ -52,11 +51,8 @@ export const Welcome = () => {
 
   const errorNotice = document.createElement("p");
   errorNotice.setAttribute("id", "error-paragraph")
-
  
-
   sectioni.append(emailInput, passInput, loginButton, googleLoginBtn, registerLink, errorNotice);
-  
 
   registerLink.addEventListener("click", () => {
     onNavigate("/register");
