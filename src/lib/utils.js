@@ -8,6 +8,7 @@ import {
   onSnapshot,
   doc,
   getDoc,
+  updateDoc
 } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
 
 //Importamos las funciones AUTH
@@ -34,4 +35,5 @@ export {
   onSnapshot,
   doc,
   getDoc,
+  updateDoc
 };
