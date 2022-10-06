@@ -1,17 +1,28 @@
 @media (min-width: 1024px) {
 
+    .regHeader {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        align-items: center;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
     #migroRedLogoR {
-        width: 300px;
+        position: relative;
+        left: -15%;
+    }
+
+    #welcomeRegister {
+        width: 82%;
+        margin-top: 40px;
     }
 
     #registerBox {
-        position: relative;
+        position: absolute;
         left: 56%;
-        margin-bottom: 17px;
-        background-color: #F1E0D6;
-        border-radius: 10px;
-        margin-top: -294px;
-        height: 390px;
+        top: 2%;
         width: 390px;
     }
 

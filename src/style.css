@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Combo&family=Reem+Kufi+Fun&family=Roboto:wght@300&family=Yantramanav:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Combo&family=DM+Mono:wght@300&family=Reem+Kufi+Fun&family=Roboto:wght@300;400&family=Yantramanav:wght@300&display=swap');
 
+
 @import url('./registerStyle.css');
 @import url('./wallStyle.css');
 
@@ -22,7 +23,8 @@ body {
 
 /* Welcome Styles*/
 
-#migroRedLogo{
+#migroRedLogo,
+#migroRedLogoR {
     width: 300px;
     margin: 30px;
 }
@@ -63,7 +65,6 @@ button {
     margin-top: 55px;
     margin-left: 30px;
     margin-right: 30px;
-    height: 16rem;
 }
 
 #emailLogin, 
@@ -274,7 +275,7 @@ button {
         background-size: 340px;
     }
 
-    .header{
+    .header {
         display: flex;
         flex-direction: column;
         width: 60%;
@@ -412,4 +413,3 @@ button {
     
 
 }
-
