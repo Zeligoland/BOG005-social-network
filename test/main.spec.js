@@ -28,6 +28,21 @@ jest.mock('../src/lib/utils.js')
 
 describe('onNavigate', () => {
    it ('test de onNavigate', () => {
+
+   document.body.innerHTML = '<div id="root"></div>'
+    onNavigate('/login', mockRoutes)
+     console.log('contenido: ', document.getElementById('root').textContent);
+     expect(document.getElementById('root').textContent).toEqual('Mock Template Login 1')
+   })
+
+  it('test de onNavigate', () => {
+    document.body.innerHTML = '<div id="root"></div>'
+    onNavigate('/register', mockRoutes)
+    console.log('contenido: ', document.getElementById('root').textContent);
+    expect(document.getElementById('root').textContent.trim()).toEqual('Mock Template register 1')
+  })
+  });
+
    document.body.innerHTML = '<div id="root"></div>';
     onNavigate('/login', mockRoutes);
 /*      console.log('contenido: ', document.getElementById('root').textContent);*/
@@ -72,4 +87,3 @@ describe('Accede a vista registro', () => {
    // expect(realResult).toBe(expectedResult);
     
 //});
-

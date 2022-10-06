@@ -4,6 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Combo&family=DM+Mono:wght@300&family=Reem+Kufi+Fun&family=Roboto:wght@300;400&family=Yantramanav:wght@300&display=swap');
 
 
+@import url('./registerStyle.css');
+@import url('./wallStyle.css');
+
 * {
     margin: 0;
     padding: 0;
@@ -18,14 +21,18 @@ body {
     background-size: 340px;
 }
 
-#migroRedLogo{
+/* Welcome Styles*/
+
+#migroRedLogo,
+#migroRedLogoR {
     width: 300px;
+    margin: 30px;
 }
 
 p {
     color: white;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 10px;
     font-family: 'DM Mono';
     font-size: 19px;
     margin-left: 25px;
@@ -58,7 +65,6 @@ button {
     margin-top: 55px;
     margin-left: 30px;
     margin-right: 30px;
-    height: 16rem;
 }
 
 #emailLogin, 
@@ -269,7 +275,7 @@ button {
         background-size: 340px;
     }
 
-    .header{
+    .header {
         display: flex;
         flex-direction: column;
         width: 60%;
@@ -281,12 +287,13 @@ button {
 
     #migroRedLogo{
         margin-bottom: 25px;
+        margin-left: -152px;
     }
     
     p {
         font-size: 16px;
         width: 80%;
-        margin-top: 0px;
+        margin-top: 9px;
         margin-left: 0px;
         margin-right: 0px;  
 
@@ -307,47 +314,33 @@ button {
     }
     
     
-    #sectioni,
-    #registerBox {
+    #sectioni {
         position: relative;
-        left: 60%;
+        left: 56%;
         margin-bottom: 17px;
         background-color: #F1E0D6;
         border-radius: 10px;
         margin-top: -294px;
-        height: 260px;
-        width: 323px;
+        height: 390px;
+        width: 390px;
 
     }
     
     #emailLogin, 
-    #passwordLogin {
-        padding: 8px 8px 8px 25px;
-        width: 240px;
-        margin-top: 20px;
+    #passwordLogin,
+    #emailInput,
+    #passInput  {
+        padding: 20px 20px 20px 20px;
+        width: 320px;
+        margin-top: 30px;
         margin-bottom: 15px;
         border-radius: 5px; 
         background-color: white;
         border: none;
-        margin-left: 40px;
+        margin-left: 36px;
         font-family: 'DM Mono';
         color: #595775;
     }
-
-#emailInput, 
-#passInput {
-    padding: 8px 8px 8px 25px;
-    width: 240px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border-radius: 5px; 
-    background-color: white;
-    border: none;
-    margin-left: 40px;
-    font-family: 'DM Mono';
-    color: #595775;
-}
-
 
 #passwordLogin {
     margin-top: 1px; 
@@ -355,25 +348,25 @@ button {
 
 #loginButton1,
 #registerButton {
-    padding: 6px;
+    padding: 20px 20px 20px 20px;
     background-color: #595775;
     border-radius: 5px;
     color: white;
-    width: 240px;
+    width: 320px;
     margin-right: 50px;
-    margin-left: 40px;
+    margin-left: 36px;
     font-family: 'DM Mono', medium;
-    font-size: 13px;
+    font-size: 14px;
     margin-top: 1px;
     cursor: pointer;
 }
 
 #googleLoginBtnG, 
 #googleRegisterBtn {
-    width: 240px;
-    height: 29px;
-    padding: 6px;
-    margin-left: 40px;
+    width: 320px;
+    height: 55px;
+    padding: 20px 20px 20px 20px;
+    margin-left: 36px;
     border-radius: 10px;
     font-size: 14px;
     color: #595775;
@@ -393,14 +386,14 @@ button {
     background-color: #F1E0D6;
     border-radius: 5px;
     color: white;
-    width: 210px;
+    width: 300px;
     height: 40px;
     margin-right: 50px;
-    margin-left: 55px;
+    margin-left: 51px;
     font-family: 'DM Mono', mixed;
     font-size: 14px;
     box-shadow:black;
-    margin-top: 10px;
+    margin-top: 16px;
     border: none;
     color: black;
     cursor: pointer;
@@ -420,4 +413,3 @@ button {
     
 
 }
-

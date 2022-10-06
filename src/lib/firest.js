@@ -1,3 +1,4 @@
+// Configuración de Firestore
 import { app } from "../lib/auth.js";
 import { getFirestore, collection, addDoc, getDocs, deleteDoc, onSnapshot, doc, getDoc, updateDoc } from "./utils.js";
 

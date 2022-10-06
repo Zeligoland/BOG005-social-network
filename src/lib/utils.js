@@ -1,3 +1,4 @@
+// En este archivo están todas las funciones/utilidades redirigidas por una URL hacia firestore
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
 import {
   getFirestore,

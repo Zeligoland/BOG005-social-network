@@ -1,4 +1,4 @@
-//Importamos las funciones AUTH 
+//Importamos las funciones AUTH - Cambiamos la ruta del firebase de cada una
 import { 
     initializeApp,
     getAuth,
