@@ -11,7 +11,7 @@ export const Wall = () => {
     const welcomeWall = document.createElement("p");
     welcomeWall.setAttribute("id", "welcomeWall")
     welcomeWall.textContent = "¡Comencemos a crear redes de apoyo!";
-    const backButtonWall    = document.createElement("button");
+    const backButtonWall = document.createElement("button");
     backButtonWall.setAttribute("id", "backButton1");
     backButtonWall.textContent = "Salir";
 
@@ -26,11 +26,7 @@ export const Wall = () => {
     const postButton = document.createElement("button");
     postButton.setAttribute("id", "postButton1");
     postButton.textContent = "Publicar";
-    const buttonLike = document.createElement("button");
-    buttonLike.setAttribute("id", "buttonLike1");
-    buttonLike.textContent = "Like";
 
-    sectionPost.append(postElement, buttonLike);
     sectionPost.append(postElement, postButton);
 
     const posters = document.createElement("section");
@@ -48,7 +44,7 @@ export const Wall = () => {
 
         onGetTasks((querySnapshot) => {
             let html = "";
-
+            let counterLike = 0;
             querySnapshot.forEach((doc) => {
                 const task = doc.data();
                 html += `
@@ -58,6 +54,8 @@ export const Wall = () => {
                         <section class="post">
                         <h3>${task.postElement}</h3>
                         </section>
+                        <p class="counter-likes">0</p>
+                        <button class="btn-like" data-id="${doc.id}">like</button>
                         <button class="btn-delete" data-id="${doc.id}">Borrar</button>
                         </section>
                     </div>
@@ -66,6 +64,21 @@ export const Wall = () => {
             postComplete.innerHTML = html;
 
             const btnsDelete = postComplete.querySelectorAll(".btn-delete");
+
+            const counterLikes = postComplete.querySelector(".counter-likes");
+            const btnLike = postComplete.querySelectorAll(".btn-like");
+
+            btnLike.forEach(btn => {
+                btn.addEventListener("click", ({ target: { dataset } }) => {
+                    console.log("like", dataset.id)
+
+                    counterLikes.innerHTML=``;
+                    counterLike++;
+                    counterLikes.innerHTML=`${counterLike}`;
+                    
+                });
+            });
+
 
             btnsDelete.forEach(btn => {
                 btn.addEventListener("click", ({ target: { dataset } }) => {
@@ -84,6 +97,8 @@ export const Wall = () => {
 
         postElement.value = "";
     });
+
+
 
     div.append(header, sectionPost, postComplete);
 

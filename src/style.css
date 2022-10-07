@@ -229,6 +229,20 @@ p {
     font-family: 'DM Mono', mixed;
 }
 
+#buttonLike1 {
+    width: 35px;
+    height: 35px;
+    margin-top: 150px;
+    margin-right: 1rem;
+    position: absolute;top: 50%;
+    border-radius: 10px;
+    border: none;
+    background-image: url(img/btn_like.png);
+}
+
+
+
+
 /*.posters {
     margin-left: 10px;
     margin-right: 30px;
@@ -337,8 +351,8 @@ p {
         margin: 1rem 1rem -5rem 1rem;
     } */
 
-    /* Aplicando Quarys Selectors para Laptop */
-    /* @media (min-width: 1020px) {
+/* Aplicando Quarys Selectors para Laptop */
+/* @media (min-width: 1020px) {
 
         #sectioni,
         #registerBox {
@@ -386,7 +400,7 @@ p {
     background-color: white;
     border: none;
     margin-top: 20px;
-    border-radius: 10px ;
+    border-radius: 10px;
     margin-left: 20px;
     margin-right: 20px;
     box-shadow: inset 2px 1px 1px 1px rgb(176, 169, 168);
@@ -399,5 +413,3 @@ p {
     margin-right: 26px;
     border-radius: 11px;
 }
-
-
