@@ -1,13 +1,12 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-
-//Importamos las funciones AUTH 
+//Importamos las funciones AUTH - Cambiamos la ruta del firebase de cada una
 import { 
+    initializeApp,
     getAuth,
     createUserWithEmailAndPassword,
     GoogleAuthProvider,
     signInWithPopup,
     signInWithEmailAndPassword,
- } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+ } from "./utils.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyAjKkyDbHluBqhq8ZVzEkc1vb231KCN8os",

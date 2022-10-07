@@ -1,5 +1,5 @@
 import { onNavigate } from "../main.js";
-import { saveTask, getTasks, onGetTasks, deleteTask, getTask } from "../lib/firest.js";
+import { saveTask, getTasks, onGetTasks, deleteTask, getTask, updateTask } from "../lib/firest.js";
 
 export const Wall = () => {
 
@@ -40,6 +40,10 @@ export const Wall = () => {
         onNavigate("/");
     });
 
+    let editStatus = false;
+    let id = "";
+
+
     window.addEventListener("DOMContentLoaded", async () => {
 
         onGetTasks((querySnapshot) => {
@@ -51,6 +55,7 @@ export const Wall = () => {
                     <div>
                         <section class="postBox">
                         <br>
+                        <button class="btn-edit" data-id="${doc.id}"></button>
                         <section class="post">
                         <h3>${task.postElement}</h3>
                         </section>
@@ -83,8 +88,25 @@ export const Wall = () => {
             btnsDelete.forEach(btn => {
                 btn.addEventListener("click", ({ target: { dataset } }) => {
                     deleteTask(dataset.id);
-                });
+                }); 
             });
+
+            const btnsEdit = postComplete.querySelectorAll(".btn-edit");
+            const taskForm = document.getElementById("postContent");
+
+            btnsEdit.forEach((btn) => {
+                btn.addEventListener("click", async (e) => {
+                    const doc = await getTask(e.target.dataset.id);
+                    const task = doc.data();
+
+                    taskForm.value = task.postElement;
+
+                    editStatus = true;
+                    id = doc.id;
+
+                    postButton.innerText = "Editar";
+                })
+            })
         });
     });
 
@@ -94,6 +116,14 @@ export const Wall = () => {
         const post = postElement;
 
         saveTask(postElement.value);
+       if (!editStatus) {
+        saveTask(postElement.value);
+       } else {
+        updateTask(id, {
+            post: postElement.value});
+
+        editStatus = false;
+       };
 
         postElement.value = "";
     });

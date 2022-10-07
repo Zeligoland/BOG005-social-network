@@ -4,6 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Combo&family=DM+Mono:wght@300&family=Reem+Kufi+Fun&family=Roboto:wght@300;400&family=Yantramanav:wght@300&display=swap');
 
 
+@import url('./registerStyle.css');
+@import url('./wallStyle.css');
+
 * {
     margin: 2rem 0rem 0rem 0rem;
     padding: 0;
@@ -13,26 +16,23 @@
 body {
     background-color: #595775;
     max-width: 100%;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: 340px;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+/* Welcome Styles*/
 
-#migroredlogo {
-    width: 75%;
-    margin-top: -3.5rem;
+#migroRedLogo,
+#migroRedLogoR {
+    width: 300px;
+    margin: 30px;
 }
-
 
 p {
     color: white;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 10px;
     font-family: 'DM Mono';
     font-size: 19px;
     margin-left: 25px;
@@ -63,8 +63,9 @@ p {
     margin-bottom: 17px;
     background-color: #F1E0D6;
     border-radius: 10px;
-    margin-top: 6px;
-    height: 16rem;
+    margin-top: 55px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 #emailLogin,
@@ -81,20 +82,7 @@ p {
     color: #595775;
 }
 
-#registerBox {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 17px;
-    background-color: #F1E0D6;
-    border-radius: 10px;
-    margin-top: 6px;
-    /* margin-right: 2rem;
-    margin-left: 2rem; */
-    height: 16rem;
-    /* margin-top: 6px; */
-}
-
-#emailInput,
+#emailInput, 
 #passInput {
     padding: 4px 8px 6px 25px;
     width: 240px;
@@ -131,7 +119,7 @@ p {
     margin-top: 1px;
 }
 
-#googleLoginBtnG,
+#googleLoginBtnG, 
 #googleRegisterBtn {
     width: 240px;
     height: 29px;
@@ -139,16 +127,16 @@ p {
     margin-left: 40px;
     border-radius: 10px;
     font-size: 14px;
-    font-family: 'DM Mono', medium;
     color: #595775;
-    background-image: url(img/btn_google_light_normal_ios.png);
+    background-image: url(img/btn_google_signin_light_normal_web.png);
     background-repeat: no-repeat;
-    background-size: 29px;
-    background-position: -1px;
+    background-size: auto;
+    background-position: center;
     border: none;
     background-color: white;
-    color: 0, 0, 0 (54%);
+    color: 0,0,0 (54%);
     margin-top: 10px;
+    cursor: pointer;
 }
 
 #registerLink1,
@@ -229,46 +217,6 @@ p {
     font-family: 'DM Mono', mixed;
 }
 
-#buttonLike1 {
-    width: 35px;
-    height: 35px;
-    margin-top: 150px;
-    margin-right: 1rem;
-    position: absolute;top: 50%;
-    border-radius: 10px;
-    border: none;
-    background-image: url(img/btn_like.png);
-}
-
-
-
-
-/*.posters {
-    margin-left: 10px;
-    margin-right: 30px;
-    margin-top: 20px;
-    border-radius: 11px;
-    display: inline-block;
-    background-color: black;
-}
-
-.postComplete {
-    width: 300px;
-    padding: 20px;
-    background-color: #595775;
-    margin-left: 15px;
-    margin-top: 25px;
-    text-align: center;
-    justify-content: center;
-    border-radius: 11px;
-    border: none;
-    resize: none;
-    font-size: 15px;
-    font-family: 'DM Mono', mixed;
-    display: inline-block;
-    box-shadow: inset 2px 1px 1px 1px rgb(176, 169, 168);
-}*/
-
 .btn-delete {
     width: 100px;
     height: 32px;
@@ -280,117 +228,7 @@ p {
     background-color: #595775;
     color: white;
     font-family: 'DM Mono', mixed;
-
 }
-
-/* #postArea VISTA MURO{
-     background-color: blue;
-} */
-
-/* aplicando Quarys Selectors Tablet 760px */
-/* @media (min-width: 760px) {
-
-    sectioin,
-    #registerBox {
-        padding: 3rem 1rem 1rem 0rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 37rem;
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-
-    #diversityImage {
-        margin-top: 1.5rem;
-    }
-
-    p,
-    .welcomeMessage {
-        font-size: 25px;
-    }
-
-    #emailLogin,
-    #passwordLogin,
-    #emailInput,
-    #passInput {
-        width: 80%;
-        height: 18%;
-        margin-top: 10px;
-        border-radius: 15px;
-        font-size: 25px;
-    }
-
-    #loginButton1,
-    #registerButton {
-        border-radius: 15px;
-        width: 80%;
-        height: 18%;
-        font-size: 25px;
-        margin-top: 10px;
-        margin-left: 14%;
-    }
-
-    #googleLoginBtnG,
-    #googleRegisterBtn {
-        width: 80%;
-        height: 18%;
-        border-radius: 15px;
-        font-size: 25px;
-        background-size: 70px;
-        background-position: 95px;
-        margin-top: 20px;
-    }
-
-    #registerLink1,
-    #backToLoginBtn {
-        border-radius: 15px;
-        width: 80%;
-        height: 18%;
-        font-size: 22px;
-        margin: 1rem 1rem -5rem 1rem;
-    } */
-
-/* Aplicando Quarys Selectors para Laptop */
-/* @media (min-width: 1020px) {
-
-        #sectioni,
-        #registerBox {
-            padding: 1rem 2rem 1rem 0rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 18rem;
-            margin-top: 5rem;
-            margin-left: 30%;
-            margin-right: 64%;
-        }
-
-        #diversityImage {
-            width: 45%;
-            margin-left: 22rem;
-            margin-top: 0rem;
-            position: absolute;
-        }
-
-        p,
-        .welcomeMessage {
-            font-size: 23px;
-            margin-top: 3rem;
-        }
-
-        #loginButton1,
-        #registerButton {
-            border-radius: 15px;
-            height: 16%;
-            margin-left: 26%;
-        }
-
-        #migroredlogo {
-            width: 30%;
-            margin: -0.8rem 1rem -2rem 1rem;
-        }
-    }
 
      */
 
@@ -399,8 +237,7 @@ p {
     padding: 20px;
     background-color: white;
     border: none;
-    margin-top: 20px;
-    border-radius: 10px;
+    border-radius: 10px ;
     margin-left: 20px;
     margin-right: 20px;
     box-shadow: inset 2px 1px 1px 1px rgb(176, 169, 168);
@@ -408,8 +245,172 @@ p {
 
 .postBox {
     background-color: #F1E0D6;
-    margin-top: 20px;
+    margin-top: 15px;
     margin-left: 26px;
     margin-right: 26px;
     border-radius: 11px;
+}
+
+.btn-edit {
+    width: 20px;
+    height: 20px;
+    background-image: url(img/editar-texto.png);
+    background-size: contain;
+    background-color:#F1E0D6;
+    border: none;
+    position: relative;
+    margin-left: 25px;
+    margin-top: -100px;
+    
+}
+
+/* Media Queries for Laptop */
+
+@media (min-width: 1024px) {
+
+    body {
+        background-color: #595775;
+        max-width: 100%;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: 340px;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        align-items: center;
+        margin-top: 5%;
+        margin-bottom: 5%;
+
+    }
+
+    #migroRedLogo{
+        margin-bottom: 25px;
+        margin-left: -152px;
+    }
+    
+    p {
+        font-size: 16px;
+        width: 80%;
+        margin-top: 9px;
+        margin-left: 0px;
+        margin-right: 0px;  
+
+    }
+    
+    .welcomeMessage {
+        font-size: 16px;
+        width: 80%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    button {
+        background-color: aliceblue;
+        margin-top: 30px;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    
+    #sectioni {
+        position: relative;
+        left: 56%;
+        margin-bottom: 17px;
+        background-color: #F1E0D6;
+        border-radius: 10px;
+        margin-top: -294px;
+        height: 390px;
+        width: 390px;
+
+    }
+    
+    #emailLogin, 
+    #passwordLogin,
+    #emailInput,
+    #passInput  {
+        padding: 20px 20px 20px 20px;
+        width: 320px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        border-radius: 5px; 
+        background-color: white;
+        border: none;
+        margin-left: 36px;
+        font-family: 'DM Mono';
+        color: #595775;
+    }
+
+#passwordLogin {
+    margin-top: 1px; 
+}
+
+#loginButton1,
+#registerButton {
+    padding: 20px 20px 20px 20px;
+    background-color: #595775;
+    border-radius: 5px;
+    color: white;
+    width: 320px;
+    margin-right: 50px;
+    margin-left: 36px;
+    font-family: 'DM Mono', medium;
+    font-size: 14px;
+    margin-top: 1px;
+    cursor: pointer;
+}
+
+#googleLoginBtnG, 
+#googleRegisterBtn {
+    width: 320px;
+    height: 55px;
+    padding: 20px 20px 20px 20px;
+    margin-left: 36px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #595775;
+    background-image: url(img/btn_google_signin_light_normal_web.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    border: none;
+    background-color: white;
+    color: 0,0,0 (54%);
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#registerLink1,
+#backToLoginBtn {
+    background-color: #F1E0D6;
+    border-radius: 5px;
+    color: white;
+    width: 300px;
+    height: 40px;
+    margin-right: 50px;
+    margin-left: 51px;
+    font-family: 'DM Mono', mixed;
+    font-size: 14px;
+    box-shadow:black;
+    margin-top: 16px;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+#diversityImage {
+    width: 50%;
+    margin-top: 2rem;
+    margin-left: 10%;
+    margin-bottom: 0px;
+    position: fixed;
+}
+
+#error-paragraph {
+    margin-top: 10px;
+}
+    
+
 }
