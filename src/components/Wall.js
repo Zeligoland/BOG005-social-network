@@ -103,12 +103,14 @@ export const Wall = () => {
         saveTask(postElement.value);
        } else {
         updateTask(id, {
-            post: postElement.value});
+            postElement: postElement.value});
+            editStatus = false;
 
-        editStatus = false;
        };
 
         postElement.value = ""; 
+        postButton.innerText = "Publicar";
+
     });
 
     div.append(header, sectionPost, postComplete);
