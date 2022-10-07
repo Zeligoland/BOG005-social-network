@@ -4,6 +4,7 @@ import { createUser, popupGoogle } from "../lib/auth.js";
 export const Register = () => {
   // esta función estará disponible en el main
   const div = document.createElement("div");
+  div.className = "container";
 
   const regHeader = document.createElement("header");
   regHeader.className = "regHeader";
