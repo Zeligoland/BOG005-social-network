@@ -8,7 +8,7 @@
 @import url('./wallStyle.css');
 
 * {
-    margin: 2rem 0rem 0rem 0rem;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -49,17 +49,16 @@ p {
     margin-right: 25px;
 }
 
-/* button {
+button {
     background-color: aliceblue;
     margin-top: 30px;
     justify-content: center;
     text-align: center;
-} */
+}
 
 
-#sectioni {
-    display: flex;
-    flex-direction: column;
+#sectioni,
+#registerBox {
     margin-bottom: 17px;
     background-color: #F1E0D6;
     border-radius: 10px;
@@ -68,13 +67,13 @@ p {
     margin-right: 30px;
 }
 
-#emailLogin,
+#emailLogin, 
 #passwordLogin {
     padding: 8px 8px 8px 25px;
     width: 240px;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 15px;
-    border-radius: 5px;
+    border-radius: 5px; 
     background-color: white;
     border: none;
     margin-left: 40px;
@@ -84,11 +83,11 @@ p {
 
 #emailInput, 
 #passInput {
-    padding: 4px 8px 6px 25px;
+    padding: 8px 8px 8px 25px;
     width: 240px;
-    margin-top: 30px;
-    margin-bottom: 6px;
-    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px; 
     background-color: white;
     border: none;
     margin-left: 40px;
@@ -98,11 +97,7 @@ p {
 
 
 #passwordLogin {
-    margin-top: 1px;
-}
-
-#passInput {
-    margin-top: 1px;
+    margin-top: 1px; 
 }
 
 #loginButton1,
@@ -112,11 +107,12 @@ p {
     border-radius: 5px;
     color: white;
     width: 240px;
-    /* margin-right: 50px; */
+    margin-right: 50px;
     margin-left: 40px;
     font-family: 'DM Mono', medium;
     font-size: 13px;
     margin-top: 1px;
+    cursor: pointer;
 }
 
 #googleLoginBtnG, 
@@ -150,15 +146,21 @@ p {
     margin-left: 55px;
     font-family: 'DM Mono', mixed;
     font-size: 14px;
-    box-shadow: black;
+    box-shadow:black;
     margin-top: 10px;
     border: none;
     color: black;
+    cursor: pointer;
 }
 
 #diversityImage {
     width: 100%;
-    margin-bottom: -2rem;
+    margin-top: 1rem;
+    bottom: 0;
+}
+
+#error-paragraph {
+    margin-top: 10px;
 }
 
 /* Wall Style*/
@@ -229,9 +231,6 @@ p {
     color: white;
     font-family: 'DM Mono', mixed;
 }
-
-     */
-
 
 .post {
     padding: 20px;

@@ -21,10 +21,7 @@ export const Welcome = () => {
   const welcomeImage = document.createElement("img");
   welcomeImage.setAttribute("src", "./img/cultural-diversity.png");
   welcomeImage.setAttribute("id", "diversityImage");
-  const imgLogo = document.createElement("img");
-  imgLogo.setAttribute("src", "./img/migroredlogo.png");
-  imgLogo.setAttribute("id", "migroredlogo");
-
+  
   header.append(logo, welcomeTitle, infoTitle);
 
   const sectioni = document.createElement("section");
@@ -101,7 +98,7 @@ export const Welcome = () => {
       });
   });
 
-  div.append(imgLogo, header, sectioni, welcomeImage);
+  div.append(header, sectioni, welcomeImage);
 
   return div;
 };
