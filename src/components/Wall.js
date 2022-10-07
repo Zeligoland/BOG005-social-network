@@ -43,7 +43,6 @@ export const Wall = () => {
     let editStatus = false;
     let id = "";
 
-
     window.addEventListener("DOMContentLoaded", async () => {
 
         onGetTasks((querySnapshot) => {
@@ -58,7 +57,7 @@ export const Wall = () => {
                         <button class="btn-edit" data-id="${doc.id}"></button>
                         <section class="post">
                         <h3>${task.postElement}</h3>
-                        </section>
+                        </section>  
                         <p class="counter-likes">0</p>
                         <button class="btn-like" data-id="${doc.id}">like</button>
                         <button class="btn-delete" data-id="${doc.id}">Borrar</button>
@@ -67,6 +66,7 @@ export const Wall = () => {
                  `;
             });
             postComplete.innerHTML = html;
+
 
             const btnsDelete = postComplete.querySelectorAll(".btn-delete");
 
@@ -129,8 +129,6 @@ export const Wall = () => {
         postButton.innerText = "Publicar";
 
     });
-
-
 
     div.append(header, sectionPost, postComplete);
 
