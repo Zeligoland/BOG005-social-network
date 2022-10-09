@@ -11,12 +11,12 @@ export const Wall = () => {
     const welcomeWall = document.createElement("p");
     welcomeWall.setAttribute("id", "welcomeWall")
     welcomeWall.textContent = "¡Comencemos a crear redes de apoyo!";
-    const backButtonWall    = document.createElement("button");
+    const backButtonWall = document.createElement("button");
     backButtonWall.setAttribute("id", "backButton1");
     backButtonWall.textContent = "Salir";
 
     header.append(backButtonWall, welcomeWall);
-    
+
     const sectionPost = document.createElement("section");
     sectionPost.setAttribute("id", "sectionPost");
     const postElement = document.createElement("textarea");
@@ -37,18 +37,17 @@ export const Wall = () => {
     posters.append(postComplete);
 
     backButtonWall.addEventListener("click", () => {
-    onNavigate("/");
+        onNavigate("/");
     });
 
     let editStatus = false;
     let id = "";
 
-
     window.addEventListener("DOMContentLoaded", async () => {
-        
+
         onGetTasks((querySnapshot) => {
             let html = "";
-
+            let counterLike = 0;
             querySnapshot.forEach((doc) => {
                 const task = doc.data();
                 html += `
@@ -58,19 +57,36 @@ export const Wall = () => {
                         <button class="btn-edit" data-id="${doc.id}"></button>
                         <section class="post">
                         <h3>${task.postElement}</h3>
-                        </section>
+                        </section>  
+                        <p class="counter-likes">0</p>
+                        <button class="btn-like" data-id="${doc.id}">like</button>
                         <button class="btn-delete" data-id="${doc.id}">Borrar</button>
                         </section>
                     </div>
                  `;
-             });
+            });
             postComplete.innerHTML = html;
+
 
             const btnsDelete = postComplete.querySelectorAll(".btn-delete");
 
-            
+            const counterLikes = postComplete.querySelector(".counter-likes");
+            const btnLike = postComplete.querySelectorAll(".btn-like");
+
+            btnLike.forEach(btn => {
+                btn.addEventListener("click", ({ target: { dataset } }) => {
+                    console.log("like", dataset.id)
+
+                    counterLikes.innerHTML=``;
+                    counterLike++;
+                    counterLikes.innerHTML=`${counterLike}`;
+                    
+                });
+            });
+
+
             btnsDelete.forEach(btn => {
-                btn.addEventListener("click", ({target: {dataset}}) => {
+                btn.addEventListener("click", ({ target: { dataset } }) => {
                     deleteTask(dataset.id);
                 }); 
             });
@@ -97,18 +113,21 @@ export const Wall = () => {
     postButton.addEventListener("click", (e) => {
         e.preventDefault();
 
-       const post =  postElement;
+        const post = postElement;
 
+        saveTask(postElement.value);
        if (!editStatus) {
         saveTask(postElement.value);
        } else {
         updateTask(id, {
-            post: postElement.value});
+            postElement: postElement.value});
+            editStatus = false;
 
-        editStatus = false;
        };
 
         postElement.value = ""; 
+        postButton.innerText = "Publicar";
+
     });
 
     div.append(header, sectionPost, postComplete);
