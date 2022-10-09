@@ -1,3 +1,5 @@
+/* Register Window - Media Queries for Laptop 1024px */
+
 @media (min-width: 1024px) {
 
     .regHeader {
@@ -34,6 +36,8 @@
     } 
 }
 
+/* Register Window - Media Queries for Laptop 1440px */
+
 @media (min-width: 1440px) {
     
     #registerBox {
@@ -43,18 +47,12 @@
     margin-top: -20%;
 }
 
-#emailInput,
 #passInput {
-    padding: 20px 20px 20px 20px;
-    width: 320px;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    border-radius: 5px; 
-    background-color: white;
-    border: none;
-    margin-left: 36px;
-    font-family: 'DM Mono';
-    color: #595775;
+    margin-top: 14px;
+}
+
+#emailInput {
+    margin-top: 60px;
 }
 
 

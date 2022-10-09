@@ -263,7 +263,7 @@ button {
     
 }
 
-/* Media Queries for Laptop 1024px */
+/* Login Window - Media Queries for Laptop 1024px */
 
 @media (min-width: 1024px) {
 
@@ -413,6 +413,8 @@ button {
 
 }
 
+/* Login Window - Media Queries for Laptop 1440px */
+
 @media (min-width: 1440px) {
     #sectioni {
         width: 450px;
@@ -422,17 +424,80 @@ button {
     }
 
     #emailLogin, 
-    #passwordLogin {
+    #passwordLogin,
+    #emailInput,
+    #passInput {
     padding: 20px 20px 20px 20px;
-    width: 320px;
-    margin-top: 30px;
+    width: 380px;
+    height: 60px;
     margin-bottom: 15px;
     border-radius: 5px; 
     background-color: white;
     border: none;
     margin-left: 36px;
     font-family: 'DM Mono';
+    font-size: 16px;
     color: #595775;
 
     }
+
+    #passwordLogin {
+        margin-top: 7px;
+    }
+
+    #emailLogin,
+    #emailInput {
+        margin-top: 60px;
+    }
+
+    #loginButton1,
+    #registerButton {
+    padding: 20px 20px 20px 20px;
+    background-color: #595775;
+    border-radius: 5px;
+    color: white;
+    width: 380px;
+    margin-right: 50px;
+    margin-left: 36px;
+    font-family: 'DM Mono', medium;
+    font-size: 16px;
+    margin-top: 1px;
+    cursor: pointer;
+}
+
+#googleLoginBtnG, 
+#googleRegisterBtn {
+    width: 380px;
+    height: 60px;
+    padding: 20px 20px 20px 20px;
+    margin-left: 36px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #595775;
+    background-image: url(img/btn_google_signin_light_normal_web.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    border: none;
+    background-color: white;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#registerLink1,
+#backToLoginBtn {
+    background-color: #F1E0D6;
+    border-radius: 5px;
+    width: 380px;
+    height: 40px;
+    margin-right: 50px;
+    margin-left: 39px;
+    font-family: 'DM Mono', mixed;
+    font-size: 16px;
+    margin-top: 16px;    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+
 }
