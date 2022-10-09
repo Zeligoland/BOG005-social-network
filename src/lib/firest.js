@@ -15,3 +15,5 @@ export const deleteTask = (id) => deleteDoc(doc(db, "tasks", id));
 export const getTask = (id) => getDoc(doc(db, "tasks", id));
 export const updateTask = (id, newFields) => 
     updateDoc(doc(db, "tasks", id), newFields);
+
+

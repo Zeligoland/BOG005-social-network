@@ -101,4 +101,4 @@ export const Welcome = () => {
   div.append(header, sectioni, welcomeImage);
 
   return div;
-};
+}; 
