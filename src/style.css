@@ -265,6 +265,7 @@ button {
 
 /* Login Window - Media Queries for Laptop 1024px */
 
+
 @media (min-width: 1024px) {
 
     body {
@@ -499,5 +500,28 @@ button {
     cursor: pointer;
 }
 
+}
 
+@media (min-width: 1440px) {
+    #sectioni {
+        width: 450px;
+        height: 450px;
+        left: 60%;
+        margin-top: -20%;
+    }
+
+    #emailLogin, 
+    #passwordLogin {
+    padding: 20px 20px 20px 20px;
+    width: 320px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-radius: 5px; 
+    background-color: white;
+    border: none;
+    margin-left: 36px;
+    font-family: 'DM Mono';
+    color: #595775;
+
+    }
 }

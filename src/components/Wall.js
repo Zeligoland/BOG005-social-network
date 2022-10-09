@@ -1,5 +1,6 @@
 import { onNavigate } from "../main.js";
 import { saveTask, getTasks, onGetTasks, deleteTask, getTask, updateTask } from "../lib/firest.js";
+import { auth } from "../lib/auth.js";
 
 export const Wall = () => {
 
@@ -50,11 +51,22 @@ export const Wall = () => {
             let counterLike = 0;
             querySnapshot.forEach((doc) => {
                 const task = doc.data();
+                const user = auth.currentUser;
+                //Constantes para capturar la fecha
+                const date = new Date();
+                const year = date.getFullYear();
+                const month = date.getMonth() + 1;
+                const day = date.getDate();
+                const hour = date.getHours();
+                const minute = date.getMinutes();
+                let dateNow = month + "/" + day + "/" + year + " " + hour + ":" + minute;
+                /* const hour = Date.now(); */
                 html += `
                     <div>
                         <section class="postBox">
                         <br>
                         <button class="btn-edit" data-id="${doc.id}"></button>
+                        <section id="userEmail">${dateNow}</section>
                         <section class="post">
                         <h3>${task.postElement}</h3>
                         </section>  

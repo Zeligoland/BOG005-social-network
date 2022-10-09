@@ -21,7 +21,7 @@ export const Welcome = () => {
   const welcomeImage = document.createElement("img");
   welcomeImage.setAttribute("src", "./img/cultural-diversity.png");
   welcomeImage.setAttribute("id", "diversityImage");
-
+  
   header.append(logo, welcomeTitle, infoTitle);
 
   const sectioni = document.createElement("section");
@@ -101,4 +101,4 @@ export const Welcome = () => {
   div.append(header, sectioni, welcomeImage);
 
   return div;
-};
+}; 
