@@ -43,7 +43,6 @@ export const Wall = () => {
 
     let editStatus = false;
     let id = "";
-    
 
     window.addEventListener("DOMContentLoaded", async () => {
 
@@ -127,8 +126,8 @@ export const Wall = () => {
         e.preventDefault();
 
         const post = postElement;
-        
 
+        saveTask(postElement.value);
        if (!editStatus) {
         saveTask(postElement.value);
        } else {
