@@ -16,3 +16,5 @@ export const updateTask = (id, newFields) =>
     updateDoc(doc(db, "tasks", id), newFields);
 
 
+
+
