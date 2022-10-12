@@ -31,4 +31,9 @@ window.onpopstate = () => {
   root.append(component());
 };
 
-root.appendChild(component());
+window.addEventListener("load", () => {
+  const component = routes[window.location.pathname];
+  root.appendChild(component());
+});
+
+// Pruebas
