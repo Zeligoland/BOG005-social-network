@@ -3,9 +3,8 @@ import { app } from "../lib/auth.js";
 import { getFirestore, collection, addDoc, getDocs, deleteDoc, onSnapshot, doc, getDoc, updateDoc } from "./utils.js";
 
 const db = getFirestore(app);
-
-export const saveTask = (postElement) => {
-    addDoc(collection(db, "tasks"), {postElement})
+export const saveTask = (postElement,email) => {
+    addDoc(collection(db, "tasks"), {postElement, likes: [], email}) //añadir like: []/ like: 0
 };
 
 export const getTasks = () => getDocs(collection(db, "tasks"));

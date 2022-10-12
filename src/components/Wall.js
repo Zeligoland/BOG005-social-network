@@ -1,7 +1,7 @@
 import { onNavigate } from "../main.js";
 import { saveTask, getTasks, onGetTasks, deleteTask, getTask, updateTask } from "../lib/firest.js";
 import { auth } from "../lib/auth.js";
-
+import { arrayUnion } from "../lib/utils.js";
 export const Wall = () => {
 
     const div = document.createElement("div");
@@ -44,8 +44,9 @@ export const Wall = () => {
     let editStatus = false;
     let id = "";
 
-    window.addEventListener("DOMContentLoaded", async () => {
 
+     //window.addEventListener("hashchange",() => { // ¿para que queriamos esto?
+    
         onGetTasks((querySnapshot) => {
             let html = "";
             let counterLike = 0;
@@ -62,33 +63,41 @@ export const Wall = () => {
                 let dateNow = month + "/" + day + "/" + year + " " + hour + ":" + minute;
                 /* const hour = Date.now(); */
                 html += `
-                    <div>
-                        <section class="postBox">
-                        <br>
-                        <button class="btn-edit" data-id="${doc.id}"></button>
-                        <section id="userEmail">${dateNow}</section>
-                        <section class="post">
-                        <h3>${task.postElement}</h3>
-                        </section>  
-                        <p class="counter-likes">0</p>
-                        <button class="btn-like" data-id="${doc.id}">like</button>
-                        <button class="btn-delete" data-id="${doc.id}">Borrar</button>
-                        </section>
-                    </div>
-                 `;
+                <div>
+                <section class="postBox">
+                <h3>By ${task.email}</h3>
+                <br>
+                <button style=" visibility:${task.email === auth.currentUser.email?"visible":"hidden"}"class="btn-edit" data-id="${doc.id}"></button>
+                <section class="post">
+                <h3>${task.postElement}</h3>
+                </section>
+                <p class="counter-likes">${task.likes.length}</p>
+                <button class="btn-like" data-id="${doc.id}">like</button>
+                <button style=" display:${task.email === auth.currentUser.email?"block":"none"}" class="btn-delete" data-id="${doc.id}">Borrar</button>
+                </section>
+                </div>
+                `;
             });
             postComplete.innerHTML = html;
-
-
+            
             const btnsDelete = postComplete.querySelectorAll(".btn-delete");
-
+            
             const counterLikes = postComplete.querySelector(".counter-likes");
             const btnLike = postComplete.querySelectorAll(".btn-like");
-
+            
             btnLike.forEach(btn => {
                 btn.addEventListener("click", ({ target: { dataset } }) => {
-                    console.log("like", dataset.id)
-
+                    console.log(auth.currentUser.email)
+                    console.log("like", )
+                    // revisar si en arreglo de likes (task.likes) ya existe el correo
+                    //TIP array.includes 
+                    // Si el email existe debes llar a update task pero con arrayRemove
+                    // Si el email NO existe llmar a update task con arrayUnion
+                    updateTask(dataset.id, {
+                        likes:  arrayUnion(auth.currentUser.email)});
+                   
+                    //doc.data.like incluye user restas uno del arreglo [genesi.com, yeny.com, lina.com] +añadir sergio.com
+                   // firebase metodo sirve aumentar o disminuir
                     counterLikes.innerHTML=``;
                     counterLike++;
                     counterLikes.innerHTML=`${counterLike}`;
@@ -120,16 +129,16 @@ export const Wall = () => {
                 })
             })
         });
-    });
+     //});
 
     postButton.addEventListener("click", (e) => {
         e.preventDefault();
 
         const post = postElement;
 
-        saveTask(postElement.value);
+        // saveTask(postElement.value);
        if (!editStatus) {
-        saveTask(postElement.value);
+        saveTask(postElement.value,auth.currentUser.email);
        } else {
         updateTask(id, {
             postElement: postElement.value});

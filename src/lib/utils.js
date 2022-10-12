@@ -9,7 +9,7 @@ import {
   onSnapshot,
   doc,
   getDoc,
-  updateDoc
+  updateDoc, arrayUnion
 } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
 
 //Importamos las funciones AUTH
@@ -19,6 +19,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   signInWithEmailAndPassword,
+  onAuthStateChanged,
 } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
 
 export {
@@ -36,5 +37,7 @@ export {
   onSnapshot,
   doc,
   getDoc,
-  updateDoc
+  updateDoc,
+  onAuthStateChanged,
+  arrayUnion
 };
