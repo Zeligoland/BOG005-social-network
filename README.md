@@ -31,7 +31,7 @@ A continuación, las historias de usuario en las que enfocamos toda la funcional
 ***Criterio de aceptación:*** El Usuario debe poder ingresar a la plataforma con su correo electrónico y contraseña y poder empezar a hacer uso de la app.
 ***Definición de temrinado:*** La interfaz permite acceder a la plataforma haciendo una verificación de que el correo ingresado en el campo de e-mail ya se ecuentre registrado en la misma, a continuación en caso de que si se encuentre registrado posterior a hacer click sobre el botón de ingreso, el usuario podría ver el muro e interactuar, sin embargo, en caso contrario, la app arrojará un error que invita al usuario a hacer click sobre el link de "Registrate aquí" y proceder con el debido registro.
 
-![img/hu1.png]
+![Historia de usuario 1](img/hu1.png)
 
 
 ## 4. Diseño de la interfaz: Prototipos
