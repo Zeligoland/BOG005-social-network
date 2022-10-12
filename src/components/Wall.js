@@ -52,6 +52,16 @@ export const Wall = () => {
             let counterLike = 0;
             querySnapshot.forEach((doc) => {
                 const task = doc.data();
+                const user = auth.currentUser;
+                //Constantes para capturar la fecha
+                const date = new Date();
+                const year = date.getFullYear();
+                const month = date.getMonth() + 1;
+                const day = date.getDate();
+                const hour = date.getHours();
+                const minute = date.getMinutes();
+                let dateNow = month + "/" + day + "/" + year + " " + hour + ":" + minute;
+                /* const hour = Date.now(); */
                 html += `
                 <div>
                 <section class="postBox">
@@ -140,8 +150,6 @@ export const Wall = () => {
         postButton.innerText = "Publicar";
 
     });
-
-
 
     div.append(header, sectionPost, postComplete);
 

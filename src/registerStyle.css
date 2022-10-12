@@ -1,3 +1,5 @@
+/* Register Window - Media Queries for Laptop 1024px */
+
 @media (min-width: 1024px) {
 
     .regHeader {
@@ -24,7 +26,32 @@
         left: 56%;
         top: 2%;
         width: 390px;
+        height: 390px;
     }
 
+    #emailInput,
+    #passInput {
+        display: flex;
+        margin-top: 1px;
+    } 
+}
+
+/* Register Window - Media Queries for Laptop 1440px */
+
+@media (min-width: 1440px) {
     
+    #registerBox {
+    width: 450px;
+    height: 450px;
+    left: 60%;
+    margin-top: -20%;   
+    }
+
+    #passInput {
+    margin-top: 14px;
+    }
+
+    #emailInput {
+    margin-top: 60px;
+    }
 }
