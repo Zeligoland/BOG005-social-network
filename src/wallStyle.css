@@ -1,11 +1,17 @@
 /* Wall Style*/
 
+#migroRedLogoW {
+    width: 217px;
+    margin-top: 8px;
+    margin-left: 12px;
+}
+
 #backButton1 {
     width: 70px;
     padding: 4px;
     background-color: #ABA6BF;
-    margin-left: 300px;
-    margin-top: 88px;
+    margin-left: 276px;
+    margin-top: -15px;
     border-radius: 7px;
     color: black;
     font-size: 15px;
@@ -17,6 +23,7 @@
 #welcomeWall {
     color: white;
     margin-top: 10px;
+    font-size: 17px;
 }
 
 #sectionPost {
@@ -25,33 +32,39 @@
     margin-top: 20px;
     border-radius: 11px;
     background-color: #F1E0D6;
+    position: -webkit-sticky; /* Mantiene estático el sectionPost */
+    position: sticky;
+    top: 0;
+    height: 111px;
 }
 
 #postContent {
-    width: 300px;
-    padding: 20px;
+    width: 284px;
+    padding: 15px;
     background-color: white;
     margin-left: 15px;
-    margin-top: 25px;
+    margin-top: 14px;
     text-align: center;
     border-radius: 11px;
     border: none;
     resize: none;
     font-size: 15px;
     box-shadow: inset 2px 1px 1px 1px rgb(176, 169, 168);
+    font-size: 13px;
 }
 
 #postButton1 {
-    width: 100px;
-    height: 32px;
-    margin-top: 5px;
-    margin-left: 215px;
+    width: 79px;
+    height: 25px;
+    margin-top: 2px;
+    margin-left: 221px;
     margin-block-end: 10px;
     border-radius: 10px;
     border: none;
     background-color: #595775;
     color: white;
     font-family: 'DM Mono', mixed;
+    font-size: 11px;
 }
 
 .btn-delete {
@@ -75,14 +88,24 @@
     margin-left: 20px;
     margin-right: 20px;
     box-shadow: inset 2px 1px 1px 1px rgb(176, 169, 168);
+    margin-top: -27px;
+    height: 46px;
 }
 
 .postBox {
     background-color: #F1E0D6;
     margin-top: 15px;
-    margin-left: 26px;
+    margin-left: 29px;
     margin-right: 26px;
     border-radius: 11px;
+    height: 125px;
+    width: 317px;
+}
+
+h2 {
+    color: royalblue;
+    font-size: 15px;
+    margin-left: 35px;
 }
 
 .btn-edit {
@@ -97,3 +120,20 @@
     margin-top: -100px;
     
 }
+
+.btn-like {
+    background-image: url(img/like.png);
+    background-size: contain;
+    background-color: #F1E0D6;
+    border: none;
+    width: 28px;
+    height: 29px; 
+    margin-top: -58px;  
+    border-radius: 9px;
+    margin-left: 36px; 
+}
+
+.counter-likes {
+    color: black;
+}
+
