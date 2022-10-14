@@ -82,7 +82,7 @@ export const Wall = () => {
             
             const btnsDelete = postComplete.querySelectorAll(".btn-delete");
             
-            const counterLikes = postComplete.querySelector(".counter-likes");
+            const counterLikes = postComplete.querySelectorAll(".counter-likes");
             const btnLike = postComplete.querySelectorAll(".btn-like");
             
             btnLike.forEach(btn => {
