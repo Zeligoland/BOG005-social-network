@@ -9,6 +9,9 @@ export const Wall = () => {
 
     const header = document.createElement("header");
     header.className = "header";
+    const logo = document.createElement("img");
+    logo.setAttribute("src", "./img/migroredlogo.png");
+    logo.setAttribute("id", "migroRedLogoW");
     const welcomeWall = document.createElement("p");
     welcomeWall.setAttribute("id", "welcomeWall")
     welcomeWall.textContent = "¡Comencemos a crear redes de apoyo!";
@@ -16,7 +19,7 @@ export const Wall = () => {
     backButtonWall.setAttribute("id", "backButton1");
     backButtonWall.textContent = "Salir";
 
-    header.append(backButtonWall, welcomeWall);
+    header.append(logo, backButtonWall, welcomeWall);
 
     const sectionPost = document.createElement("section");
     sectionPost.setAttribute("id", "sectionPost");
@@ -63,7 +66,7 @@ export const Wall = () => {
             html += `
                 <div>
                 <section class="postBox">
-                <h3>By ${task.email}</h3>
+                <h2>${task.email}</h2>
                 <br>
                 <button style=" visibility:${task.email === auth.currentUser.email ? "visible" : "hidden"}"class="btn-edit" data-id="${doc.id}"></button>
                 <section class="post">
