@@ -68,9 +68,9 @@
 }
 
 .btn-delete {
-    width: 100px;
-    height: 32px;
-    margin-top: 5px;
+    width: 79px;
+    height: 25px;
+    margin-top: -44px;
     margin-left: 215px;
     margin-block-end: 10px;
     border-radius: 10px;
@@ -78,6 +78,7 @@
     background-color: #595775;
     color: white;
     font-family: 'DM Mono', mixed;
+    font-size: 11px;
 }
 
 .post {
@@ -95,17 +96,17 @@
 .postBox {
     background-color: #F1E0D6;
     margin-top: 15px;
-    margin-left: 29px;
+    margin-left: 30px;
     margin-right: 26px;
     border-radius: 11px;
-    height: 125px;
-    width: 317px;
+    height: 176px;
+    width: 315px;
 }
 
 h2 {
     color: royalblue;
     font-size: 15px;
-    margin-left: 35px;
+    margin-left: 49px;
 }
 
 .btn-edit {
@@ -113,11 +114,13 @@ h2 {
     height: 20px;
     background-image: url(img/editar-texto.png);
     background-size: contain;
-    background-color:#F1E0D6;
+    background-color:#FFFF;
+    background-repeat: no-repeat;
     border: none;
     position: relative;
     margin-left: 25px;
-    margin-top: -100px;
+    margin-top: -10px;
+    border-radius: 4px;
     
 }
 
@@ -130,10 +133,12 @@ h2 {
     height: 29px; 
     margin-top: -58px;  
     border-radius: 9px;
-    margin-left: 36px; 
+    margin-left: 45px; 
 }
 
 .counter-likes {
     color: black;
+    font-size: 15px;
+    margin-left: -232px;
 }
 

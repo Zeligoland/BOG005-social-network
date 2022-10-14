@@ -4,7 +4,7 @@ import { getFirestore, collection, addDoc, getDocs, deleteDoc, onSnapshot, doc, 
 
 const db = getFirestore(app);
 export const saveTask = (postElement,email) => {
-    addDoc(collection(db, "tasks"), {postElement, likes: [], email}) //añadir like: []/ like: 0
+    addDoc(collection(db, "tasks"), {postElement, likes: [], email, date: {}}) //añadir like: []/ like: 0
 };
 
 export const getTasks = () => getDocs(collection(db, "tasks"));

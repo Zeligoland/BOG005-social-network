@@ -9,7 +9,9 @@ import {
   onSnapshot,
   doc,
   getDoc,
-  updateDoc, arrayUnion
+  updateDoc, 
+  arrayUnion,
+  Timestamp
 } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
 
 //Importamos las funciones AUTH
@@ -39,5 +41,6 @@ export {
   getDoc,
   updateDoc,
   onAuthStateChanged,
-  arrayUnion
+  arrayUnion,
+  Timestamp
 };
