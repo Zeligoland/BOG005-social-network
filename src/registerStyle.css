@@ -44,16 +44,14 @@
     width: 450px;
     height: 450px;
     left: 60%;
-    margin-top: -20%;
-}
+    margin-top: -20%;   
+    }
 
-#passInput {
+    #passInput {
     margin-top: 14px;
-}
+    }
 
-#emailInput {
+    #emailInput {
     margin-top: 60px;
-}
-
-
+    }
 }

@@ -163,108 +163,512 @@ button {
     margin-top: 10px;
 }
 
-/* Wall Style*/
+/* Media Queries for Mobile S */
 
-#backButton1 {
-    width: 70px;
-    padding: 4px;
-    background-color: #ABA6BF;
-    margin-left: 300px;
-    margin-top: 88px;
-    border-radius: 7px;
-    color: black;
-    font-size: 15px;
-    font-family: 'DM Mono', mixed;
-    border: none;
-    box-shadow: 0.5px 0.5px 1px 1px #F1E0D6;
-}
+@media (max-width: 320px) {
 
-#welcomeWall {
-    color: white;
-    margin-top: 10px;
-}
+    body {
+        background-color: #595775;
+        max-width: 50%;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: 340px;
+        overflow: hidden;
+    }
 
-#sectionPost {
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-top: 20px;
-    border-radius: 11px;
-    background-color: #F1E0D6;
-}
+    .header {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        align-items: center;
+        margin-top: 5%;
+        margin-bottom: 5%;
 
-#postContent {
-    width: 300px;
-    padding: 20px;
-    background-color: white;
-    margin-left: 15px;
-    margin-top: 25px;
-    text-align: center;
-    border-radius: 11px;
-    border: none;
-    resize: none;
-    font-size: 15px;
-    box-shadow: inset 2px 1px 1px 1px rgb(176, 169, 168);
-}
+    }
 
-#postButton1 {
-    width: 100px;
-    height: 32px;
-    margin-top: 5px;
-    margin-left: 215px;
-    margin-block-end: 10px;
-    border-radius: 10px;
-    border: none;
-    background-color: #595775;
-    color: white;
-    font-family: 'DM Mono', mixed;
-}
+    #migroRedLogo {
+        margin-bottom: 25px;
+        margin-left: 280px;
+        margin-top: 20px;
+    }
 
-.btn-delete {
-    width: 100px;
-    height: 32px;
-    margin-top: 5px;
-    margin-left: 215px;
-    margin-block-end: 10px;
-    border-radius: 10px;
-    border: none;
-    background-color: #595775;
-    color: white;
-    font-family: 'DM Mono', mixed;
-}
-
-.post {
-    padding: 20px;
-    background-color: white;
-    border: none;
-    border-radius: 10px ;
-    margin-left: 20px;
-    margin-right: 20px;
-    box-shadow: inset 2px 1px 1px 1px rgb(176, 169, 168);
-}
-
-.postBox {
-    background-color: #F1E0D6;
-    margin-top: 15px;
-    margin-left: 26px;
-    margin-right: 26px;
-    border-radius: 11px;
-}
-
-.btn-edit {
-    width: 20px;
-    height: 20px;
-    background-image: url(img/editar-texto.png);
-    background-size: contain;
-    background-color:#F1E0D6;
-    border: none;
-    position: relative;
-    margin-left: 25px;
-    margin-top: -100px;
+    #migroRedLogoR {
+        margin-left: 5px;
+        margin-top: 6px;
+    }
     
+    p {
+        font-size: 12px;
+        width: 400%;
+        margin-top: -10px;
+        margin-left: 250px;
+        margin-right: 0px;  
+
+    }
+    
+    .welcomeMessage {
+        font-size: 9px;
+        width: 400%;
+        margin-left: 250px;
+        margin-right: 0px;
+        margin-top: 21px;
+    }
+
+    #welcomeRegister {
+        margin-left: 40px;
+        width: 250px;
+        margin-top: 4px;
+    }
+    
+    button {
+        background-color: aliceblue;
+        margin-top: 30px;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    
+    #sectioni,
+    #registerBox {
+        position: relative;
+        left: 1%;
+        margin-bottom: 17px;
+        background-color: #F1E0D6;
+        border-radius: 10px;
+        margin-top: 35px;
+        height: 158px;
+        width: 260px;
+
+    }
+    
+    #emailLogin, 
+    #passwordLogin,
+    #emailInput,
+    #passInput {
+        padding: 1px 1px 1px 1px;
+        width: 217px;
+        margin-top: 9px;
+        margin-bottom: 15px;
+        border-radius: 5px; 
+        background-color: white;
+        border: none;
+        margin-left: 20px;
+        font-family: 'DM Mono';
+        color: #595775;
+        font-size: 11px;
+    }
+
+    #passwordLogin {
+        margin-top: 1px; 
+    }
+
+    #loginButton1,
+    #registerButton {
+        padding: 1px 1px 1px 1px;
+        background-color: #595775;
+        border-radius: 5px;
+        color: white;
+        width: 220px;
+        margin-right: 50px;
+        margin-left: 20px;
+        font-family: 'DM Mono', medium;
+        font-size: 14px;
+        margin-top: 1px;
+        cursor: pointer;
+        font-size: 11px;
+    }
+
+    #googleLoginBtnG, 
+    #googleRegisterBtn {
+        width: 219px;
+        height: 22px;
+        padding: 2px 2px 2px 2px;
+        margin-left: 20px;
+        border-radius: 10px;
+        font-size: 14px;
+        color: #595775;
+        background-image: url(img/btn_google_signin_light_normal_web.png);
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center;
+        border: none;
+        background-color: white;
+        color: 0,0,0 (54%);
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    #registerLink1,
+    #backToLoginBtn {
+        background-color: #F1E0D6;
+        border-radius: 5px;
+        color: white;
+        width: 200px;
+        height: 10px;
+        margin-right: 50px;
+        margin-left: 30px;
+        font-family: 'DM Mono', mixed;
+        font-size: 7px;
+        box-shadow:black;
+        margin-top: -19px;
+        border: none;
+        color: black;
+        cursor: pointer;
+    }
+
+    #diversityImage {
+        width: 320px;
+        margin-top: 1px;
+        margin-left: 0%;
+        margin-bottom: 0px;
+        height: 120px;
+        position: end;
+    }
+
+    #error-paragraph {
+        margin-top: 10px;
+    }
+}
+
+/* Media Queries for Mobile L */
+
+@media (min-width: 376px) and (max-width: 425px) {
+    body {
+        background-color: #595775;
+        max-width: 50%;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: 340px;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        align-items: center;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    #migroRedLogo {
+        margin-bottom: 25px;
+        margin-left: 343px;
+        margin-top: 17px;
+    }
+
+    #migroRedLogoR {
+        margin-left: 50px;
+        margin-top: 5px;
+    }
+    
+    p {
+        font-size: 16px;
+        width: 400%;
+        margin-top: 0px;
+        margin-left: 320px;
+        margin-right: 0px;  
+
+    }
+    
+    .welcomeMessage {
+        font-size: 12px;
+        width: 400%;
+        margin-left: 320px;
+        margin-right: 0px;
+        margin-top: 43px;
+    }
+
+    #welcomeRegister {
+        margin-left: 40px;
+        width: 345px;
+    }
+    
+    button {
+        background-color: aliceblue;
+        margin-top: 30px;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    #sectioni,
+    #registerBox {
+        position: relative;
+        left: 17%;
+        margin-bottom: 17px;
+        background-color: #F1E0D6;
+        border-radius: 10px;
+        margin-top: 42px;
+        height: 196px;
+        width: 279px;
+    }
+    
+    #emailLogin, 
+    #passwordLogin,
+    #emailInput,
+    #passInput {
+        padding: 5px 5px 5px 5px;
+        width: 220px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px; 
+        background-color: white;
+        border: none;
+        margin-left: 29px;
+        font-family: 'DM Mono';
+        color: #595775;
+    }
+
+    #passwordLogin {
+        margin-top: 1px; 
+    }
+
+    #loginButton1,
+    #registerButton {
+        padding: 5px 5px 5px 5px;
+        background-color: #595775;
+        border-radius: 5px;
+        color: white;
+        width: 220px;
+        margin-right: 50px;
+        margin-left: 29px;
+        font-family: 'DM Mono', medium;
+        font-size: 14px;
+        margin-top: 1px;
+        cursor: pointer;
+    }
+
+    #googleLoginBtnG, 
+    #googleRegisterBtn {
+        width: 220px;
+        height: 25px;
+        padding: 5px 5px 5px 5px;
+        margin-left: 29px;
+        border-radius: 10px;
+        font-size: 14px;
+        color: #595775;
+        background-image: url(img/btn_google_signin_light_normal_web.png);
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center;
+        border: none;
+        background-color: white;
+        color: 0,0,0 (54%);
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    #registerLink1,
+    #backToLoginBtn {
+        background-color: #F1E0D6;
+        border-radius: 5px;
+        color: white;
+        width: 200px;
+        height: 10px;
+        margin-right: 50px;
+        margin-left: 30px;
+        font-family: 'DM Mono', mixed;
+        font-size: 9px;
+        box-shadow:black;
+        margin-top: -19px;
+        border: none;
+        color: black;
+        cursor: pointer;
+    }
+
+    #diversityImage {
+        width: 376px;
+        margin-top: 25px;
+        margin-left: 4%;
+        margin-bottom: 0px;
+        height: 140px;
+        position: end;
+    }
+
+    #error-paragraph {
+        margin-top: 10px;
+    }
+}
+
+/* Media Queries for Tablet */
+
+@media (min-width: 426px) and (max-width: 768px) {
+
+    body {
+        background-color: #595775;
+        max-width: 100%;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: 340px;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        align-items: center;
+        margin-top: 5%;
+        margin-bottom: 5%;
+
+    }
+
+    #migroRedLogo{
+        margin-bottom: 25px;
+        margin-left: 279px;
+        height: 108px;
+        width: 502px;
+        margin-top: 25px;
+    }
+
+    #migroRedLogoR{
+        margin-bottom: 25px;
+        margin-left: 133px;
+        height: 108px;
+        width: 502px;
+        margin-top: 15px;
+    }
+    
+    p {
+        font-size: 27px;
+        width: 123%;
+        margin-top: 6px;
+        margin-left: 296px;
+        margin-right: 0px;  
+
+    }
+    
+    .welcomeMessage {
+        font-size: 19px;
+        width: 134%;
+        margin-left: 295px;
+        margin-right: 0px;
+        margin-top: 28px;
+    }
+
+    #welcomeRegister {
+        font-size: 24px;
+        width: 90%;
+        margin-left: 55px;
+        margin-right: 0px;
+        margin-top: 28px
+    }
+    
+    button {
+        background-color: aliceblue;
+        margin-top: 30px;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    
+    #sectioni {
+        position: relative;
+        left: 17%;
+        margin-bottom: 17px;
+        background-color: #F1E0D6;
+        border-radius: 10px;
+        margin-top: 42px;
+        height: 276px;
+        width: 425px;
+
+    }
+
+    #registerBox {
+        position: relative;
+        left: 17%;
+        margin-bottom: 17px;
+        background-color: #F1E0D6;
+        border-radius: 10px;
+        margin-top: 33px;
+        height: 297px;
+        width: 425px;
+    }
+    
+    #emailLogin, 
+    #passwordLogin,
+    #emailInput,
+    #passInput {
+        padding: 8px 8px 8px 8px;
+        width: 349px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        border-radius: 5px; 
+        background-color: white;
+        border: none;
+        margin-left: 36px;
+        font-family: 'DM Mono';
+        color: #595775;
+    }
+
+    #passwordLogin {
+        margin-top: 1px; 
+    }
+
+    #loginButton1,
+    #registerButton {
+        padding: 8px 8px 8px 8px;
+        background-color: #595775;
+        border-radius: 5px;
+        color: white;
+        width: 349px;
+        margin-right: 50px;
+        margin-left: 36px;
+        font-family: 'DM Mono', medium;
+        font-size: 14px;
+        margin-top: 1px;
+        cursor: pointer;
+    }
+
+    #googleLoginBtnG, 
+    #googleRegisterBtn {
+        width: 349px;
+        height: 33px;
+        padding: 8px 8px 8px 8px;
+        margin-left: 36px;
+        border-radius: 10px;
+        font-size: 14px;
+        color: #595775;
+        background-image: url(img/btn_google_signin_light_normal_web.png);
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center;
+        border: none;
+        background-color: white;
+        color: 0,0,0 (54%);
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    #registerLink1,
+    #backToLoginBtn {
+        background-color: #F1E0D6;
+        border-radius: 5px;
+        color: white;
+        width: 300px;
+        height: 40px;
+        margin-right: 50px;
+        margin-left: 51px;
+        font-family: 'DM Mono', mixed;
+        font-size: 14px;
+        box-shadow:black;
+        margin-top: 16px;
+        border: none;
+        color: black;
+        cursor: pointer;
+    }
+
+    #diversityImage {
+        width: 67%;
+        margin-top: 2rem;
+        margin-left: 14%;
+        margin-bottom: 0px;
+    }
+
+    #error-paragraph {
+        margin-top: 10px;
+    }
 }
 
 /* Login Window - Media Queries for Laptop 1024px */
-
 
 @media (min-width: 1024px) {
 
@@ -343,74 +747,74 @@ button {
         color: #595775;
     }
 
-#passwordLogin {
-    margin-top: 1px; 
-}
+    #passwordLogin {
+        margin-top: 1px; 
+    }
 
-#loginButton1,
-#registerButton {
-    padding: 20px 20px 20px 20px;
-    background-color: #595775;
-    border-radius: 5px;
-    color: white;
-    width: 320px;
-    margin-right: 50px;
-    margin-left: 36px;
-    font-family: 'DM Mono', medium;
-    font-size: 14px;
-    margin-top: 1px;
-    cursor: pointer;
-}
+    #loginButton1,
+    #registerButton {
+        padding: 20px 20px 20px 20px;
+        background-color: #595775;
+        border-radius: 5px;
+        color: white;
+        width: 320px;
+        margin-right: 50px;
+        margin-left: 36px;
+        font-family: 'DM Mono', medium;
+        font-size: 14px;
+        margin-top: 1px;
+        cursor: pointer;
+    }
 
-#googleLoginBtnG, 
-#googleRegisterBtn {
-    width: 320px;
-    height: 55px;
-    padding: 20px 20px 20px 20px;
-    margin-left: 36px;
-    border-radius: 10px;
-    font-size: 14px;
-    color: #595775;
-    background-image: url(img/btn_google_signin_light_normal_web.png);
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center;
-    border: none;
-    background-color: white;
-    color: 0,0,0 (54%);
-    margin-top: 10px;
-    cursor: pointer;
-}
+    #googleLoginBtnG, 
+    #googleRegisterBtn {
+        width: 320px;
+        height: 55px;
+        padding: 20px 20px 20px 20px;
+        margin-left: 36px;
+        border-radius: 10px;
+        font-size: 14px;
+        color: #595775;
+        background-image: url(img/btn_google_signin_light_normal_web.png);
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center;
+        border: none;
+        background-color: white;
+        color: 0,0,0 (54%);
+        margin-top: 10px;
+        cursor: pointer;
+    }
 
-#registerLink1,
-#backToLoginBtn {
-    background-color: #F1E0D6;
-    border-radius: 5px;
-    color: white;
-    width: 300px;
-    height: 40px;
-    margin-right: 50px;
-    margin-left: 51px;
-    font-family: 'DM Mono', mixed;
-    font-size: 14px;
-    box-shadow:black;
-    margin-top: 16px;
-    border: none;
-    color: black;
-    cursor: pointer;
-}
+    #registerLink1,
+    #backToLoginBtn {
+        background-color: #F1E0D6;
+        border-radius: 5px;
+        color: white;
+        width: 300px;
+        height: 40px;
+        margin-right: 50px;
+        margin-left: 51px;
+        font-family: 'DM Mono', mixed;
+        font-size: 14px;
+        box-shadow:black;
+        margin-top: 16px;
+        border: none;
+        color: black;
+        cursor: pointer;
+    }
 
-#diversityImage {
-    width: 50%;
-    margin-top: 2rem;
-    margin-left: 10%;
-    margin-bottom: 0px;
-    position: fixed;
-}
+    #diversityImage {
+        width: 50%;
+        margin-top: 2rem;
+        margin-left: 10%;
+        margin-bottom: 0px;
+        position: fixed;
+    }
 
-#error-paragraph {
-    margin-top: 10px;
-}
+    #error-paragraph {
+        margin-top: 10px;
+    }
 
 }
 
@@ -428,17 +832,17 @@ button {
     #passwordLogin,
     #emailInput,
     #passInput {
-    padding: 20px 20px 20px 20px;
-    width: 380px;
-    height: 60px;
-    margin-bottom: 15px;
-    border-radius: 5px; 
-    background-color: white;
-    border: none;
-    margin-left: 36px;
-    font-family: 'DM Mono';
-    font-size: 16px;
-    color: #595775;
+        padding: 20px 20px 20px 20px;
+        width: 380px;
+        height: 60px;
+        margin-bottom: 15px;
+        border-radius: 5px; 
+        background-color: white;
+        border: none;
+        margin-left: 36px;
+        font-family: 'DM Mono';
+        font-size: 16px;
+        color: #595775;
 
     }
 
@@ -453,75 +857,50 @@ button {
 
     #loginButton1,
     #registerButton {
-    padding: 20px 20px 20px 20px;
-    background-color: #595775;
-    border-radius: 5px;
-    color: white;
-    width: 380px;
-    margin-right: 50px;
-    margin-left: 36px;
-    font-family: 'DM Mono', medium;
-    font-size: 16px;
-    margin-top: 1px;
-    cursor: pointer;
-}
-
-#googleLoginBtnG, 
-#googleRegisterBtn {
-    width: 380px;
-    height: 60px;
-    padding: 20px 20px 20px 20px;
-    margin-left: 36px;
-    border-radius: 10px;
-    font-size: 16px;
-    color: #595775;
-    background-image: url(img/btn_google_signin_light_normal_web.png);
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center;
-    border: none;
-    background-color: white;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-#registerLink1,
-#backToLoginBtn {
-    background-color: #F1E0D6;
-    border-radius: 5px;
-    width: 380px;
-    height: 40px;
-    margin-right: 50px;
-    margin-left: 39px;
-    font-family: 'DM Mono', mixed;
-    font-size: 16px;
-    margin-top: 16px;    border: none;
-    color: black;
-    cursor: pointer;
-}
-
-}
-
-@media (min-width: 1440px) {
-    #sectioni {
-        width: 450px;
-        height: 450px;
-        left: 60%;
-        margin-top: -20%;
+        padding: 20px 20px 20px 20px;
+        background-color: #595775;
+        border-radius: 5px;
+        color: white;
+        width: 380px;
+        margin-right: 50px;
+        margin-left: 36px;
+        font-family: 'DM Mono', medium;
+        font-size: 16px;
+        margin-top: 1px;
+        cursor: pointer;
     }
 
-    #emailLogin, 
-    #passwordLogin {
-    padding: 20px 20px 20px 20px;
-    width: 320px;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    border-radius: 5px; 
-    background-color: white;
-    border: none;
-    margin-left: 36px;
-    font-family: 'DM Mono';
-    color: #595775;
+    #googleLoginBtnG, 
+    #googleRegisterBtn {
+        width: 380px;
+        height: 60px;
+        padding: 20px 20px 20px 20px;
+        margin-left: 36px;
+        border-radius: 10px;
+        font-size: 16px;
+        color: #595775;
+        background-image: url(img/btn_google_signin_light_normal_web.png);
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center;
+        border: none;
+        background-color: white;
+        margin-top: 10px;
+        cursor: pointer;
+    }
 
+    #registerLink1,
+    #backToLoginBtn {
+        background-color: #F1E0D6;
+        border-radius: 5px;
+        width: 380px;
+        height: 40px;
+        margin-right: 50px;
+        margin-left: 39px;
+        font-family: 'DM Mono', mixed;
+        font-size: 16px;
+        margin-top: 16px;    border: none;
+        color: black;
+        cursor: pointer;
     }
 }

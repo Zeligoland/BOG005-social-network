@@ -1,7 +1,7 @@
 import { onNavigate } from "../main.js";
 import { saveTask, getTasks, onGetTasks, deleteTask, getTask, updateTask } from "../lib/firest.js";
 import { auth } from "../lib/auth.js";
-
+import { arrayUnion } from "../lib/utils.js";
 export const Wall = () => {
 
     const div = document.createElement("div");
@@ -9,6 +9,9 @@ export const Wall = () => {
 
     const header = document.createElement("header");
     header.className = "header";
+    const logo = document.createElement("img");
+    logo.setAttribute("src", "./img/migroredlogo.png");
+    logo.setAttribute("id", "migroRedLogoW");
     const welcomeWall = document.createElement("p");
     welcomeWall.setAttribute("id", "welcomeWall")
     welcomeWall.textContent = "¡Comencemos a crear redes de apoyo!";
@@ -16,13 +19,13 @@ export const Wall = () => {
     backButtonWall.setAttribute("id", "backButton1");
     backButtonWall.textContent = "Salir";
 
-    header.append(backButtonWall, welcomeWall);
+    header.append(logo, backButtonWall, welcomeWall);
 
     const sectionPost = document.createElement("section");
     sectionPost.setAttribute("id", "sectionPost");
     const postElement = document.createElement("textarea");
     postElement.setAttribute("id", "postContent");
-    postElement.setAttribute("placeholder", "¿Que quieres decir/publicar?");
+    postElement.setAttribute("placeholder", "¿Qué quieres decir/publicar?");
     postElement.spellcheck = true;
     const postButton = document.createElement("button");
     postButton.setAttribute("id", "postButton1");
@@ -43,52 +46,68 @@ export const Wall = () => {
 
     let editStatus = false;
     let id = "";
+    const hour = Date.now();
 
-    window.addEventListener("DOMContentLoaded", async () => {
 
+
+     //window.addEventListener("hashchange",() => { // ¿para que queriamos esto?
+    
         onGetTasks((querySnapshot) => {
             let html = "";
             let counterLike = 0;
             querySnapshot.forEach((doc) => {
                 const task = doc.data();
                 const user = auth.currentUser;
-                //Constantes para capturar la fecha
-                const date = new Date();
-                const year = date.getFullYear();
-                const month = date.getMonth() + 1;
-                const day = date.getDate();
-                const hour = date.getHours();
-                const minute = date.getMinutes();
-                let dateNow = month + "/" + day + "/" + year + " " + hour + ":" + minute;
-                /* const hour = Date.now(); */
+                //Constante para capturar la fecha
+                let fecha = new Date();
+                let diaSemana = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado"];
+                let mesAnyo = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre",
+                "Noviembre", "Diciembre"];
+                /* console.log(mesAnyo[fecha.getMonth()]);
+                console.log(`${diaSemana[fecha.getDay()]}, ${fecha.getDate()} de ${mesAnyo[fecha.getMonth()]} de ${fecha.getFullYear()}`); */
+                setInterval(() => {
+                    let hora = new Date();
+                    let horaFinal = hora.toLocaleTimeString();
+                   /* console.log(horaFinal);*/
+                }, 1000);
+
                 html += `
-                    <div>
-                        <section class="postBox">
-                        <br>
-                        <button class="btn-edit" data-id="${doc.id}"></button>
-                        <section id="userEmail">${dateNow}</section>
-                        <section class="post">
-                        <h3>${task.postElement}</h3>
-                        </section>  
-                        <p class="counter-likes">0</p>
-                        <button class="btn-like" data-id="${doc.id}">like</button>
-                        <button class="btn-delete" data-id="${doc.id}">Borrar</button>
-                        </section>
-                    </div>
-                 `;
+                <div>
+                <section class="postBox">
+                <h2>${task.email}</h2>
+                <h2>${diaSemana[fecha.getDay()]}, ${fecha.getDate()} de ${mesAnyo[fecha.getMonth()]} de ${fecha.getFullYear()}</h2>
+                <br>
+                <button style=" visibility:${task.email === auth.currentUser.email?"visible":"hidden"}"class="btn-edit" data-id="${doc.id}"></button>
+                <section class="post">
+                <h3>${task.postElement}</h3>
+                </section>
+                <p class="counter-likes">${task.likes.length}</p>
+                <button class="btn-like" data-id="${doc.id}"></button>
+                <button style=" display:${task.email === auth.currentUser.email?"block":"none"}" class="btn-delete" data-id="${doc.id}">Borrar</button>
+                </section>
+                </div>
+                `;
             });
             postComplete.innerHTML = html;
-
-
+            
             const btnsDelete = postComplete.querySelectorAll(".btn-delete");
-
-            const counterLikes = postComplete.querySelector(".counter-likes");
+            
+            const counterLikes = postComplete.querySelectorAll(".counter-likes");
             const btnLike = postComplete.querySelectorAll(".btn-like");
-
+            
             btnLike.forEach(btn => {
                 btn.addEventListener("click", ({ target: { dataset } }) => {
-                    console.log("like", dataset.id)
-
+                    console.log(auth.currentUser.email)
+                    console.log("like", )
+                    // revisar si en arreglo de likes (task.likes) ya existe el correo
+                    //TIP array.includes 
+                    // Si el email existe debes llar a update task pero con arrayRemove
+                    // Si el email NO existe llmar a update task con arrayUnion
+                    updateTask(dataset.id, {
+                        likes:  arrayUnion(auth.currentUser.email)});
+                   
+                    //doc.data.like incluye user restas uno del arreglo [genesi.com, yeny.com, lina.com] +añadir sergio.com
+                   // firebase metodo sirve aumentar o disminuir
                     counterLikes.innerHTML=``;
                     counterLike++;
                     counterLikes.innerHTML=`${counterLike}`;
@@ -99,7 +118,14 @@ export const Wall = () => {
 
             btnsDelete.forEach(btn => {
                 btn.addEventListener("click", ({ target: { dataset } }) => {
-                    deleteTask(dataset.id);
+                    const result = confirm("¿Estás seguro de borrar esta publicación?");
+                    if (result === true){
+                        return deleteTask(dataset.id);
+                    }
+                    else {
+                        return false;
+                    }
+
                 }); 
             });
 
@@ -120,16 +146,19 @@ export const Wall = () => {
                 })
             })
         });
-    });
+     //});
 
     postButton.addEventListener("click", (e) => {
         e.preventDefault();
 
         const post = postElement;
+        let fecha = new Date();
 
-        saveTask(postElement.value);
+
+
+        // saveTask(postElement.value);
        if (!editStatus) {
-        saveTask(postElement.value);
+        saveTask(postElement.value,auth.currentUser.email, fecha.value);
        } else {
         updateTask(id, {
             postElement: postElement.value});
