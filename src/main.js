@@ -4,8 +4,6 @@ import { Welcome } from "./components/Welcome.js";
 import { Register } from "./components/Register.js";
 import { Wall } from "./components/Wall.js";
 
-const root = document.getElementById("root");
-
 const routes = {
   // aquí va la ruta y lo que debe renderizar
   "/": Welcome,
@@ -16,19 +14,29 @@ const routes = {
 // la ruta como parte del título y el dominio en el cual estamos más la ruta
 // esta función onNavigate tiene la tarea de trabajar para la navegación
 export const onNavigate = (pathname, paramRoutes = routes) => {
+  const root = document.getElementById("root");
   window.history.pushState(
     {}, 
     pathname, 
     window.location.origin + pathname,
     );
-  root.removeChild(root.firstChild);
-  root.appendChild(routes[pathname]());
+  if (root.firstChild) {
+    root.removeChild(root.firstChild)
+  };
+  root.appendChild(paramRoutes[pathname]());
 };
 
-const component = routes[window.location.pathname];
+
 window.onpopstate = () => {
-  root.removeChild(root.firstChild);
+  const component = routes[window.location.pathname];
+  const root = document.getElementById("root");
+  if (root.firstChild) {
+    root.removeChild(root.firstChild)
+  };
   root.append(component());
 };
 
-root.appendChild(component());
+window.addEventListener("load", () => {
+  const component = routes[window.location.pathname];
+  root.appendChild(component());
+})
