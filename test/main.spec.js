@@ -20,7 +20,7 @@ const mockTemplateLogin = () => {
  }
 
 describe('onNavigate', () => {
-   it ('test de onNavigate para Login', () => {
+   it ('onNavigate lleva a Login efectivamente', () => {
 
    document.body.innerHTML = '<div id="root"></div>'
     onNavigate('/login', mockRoutes)
@@ -28,25 +28,10 @@ describe('onNavigate', () => {
      expect(document.getElementById('root').textContent).toEqual('Mock Template Login')
    })
 
-   it('test de onNavigate para Register', () => {
+   it('onNavigate lleva a Register Efectivamente', () => {
     document.body.innerHTML = '<div id="root"></div>'
     onNavigate('/register', mockRoutes)
     console.log('contenido: ', document.getElementById('root').textContent);
     expect(document.getElementById('root').textContent.trim()).toEqual('Mock Template register')
   })
   });
-
-  //const mockTemplateWall = () => {
-   // const 
-  //}
-
-  //describe ('')
-
-// import { signInUser } from "../src/lib/auth.js";
-
-//describe('Arroja error para correo invalido', () => {
-  //  let invalidEmail = "123@nada.es";
-   // let expectedResult = "Correo invalido, revise la información suministrada"
-    //let realResult = signInUser(invalidEmail);
-
-   // expect(realResult).toBe(expectedResult);*/

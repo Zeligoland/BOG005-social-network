@@ -16,7 +16,7 @@ Un proceso migratorio implica retos enormes de adaptación para las personas, ad
 
 > Según Benítez, J. L. (2011), las redes sociales tienen “un papel decisivo en los procesos de toma de decisión de emigrar, el viaje o tránsito, la llegada e inserción en los países de destino, el mantenimiento de lazos y los procesos de comunicación transnacional” (Benítez, 2011, p. 39). 
 
-*Benítez, J. L. (2011). La comunicación transnacional de las familias e-migrantes. San Salvador: pnud/uca.*
+  *Benítez, J. L. (2011). La comunicación transnacional de las familias e-migrantes. San Salvador: pnud/uca.*
 
 Establecer nuevas redes de apoyo contribuye al proceso de adaptación y, para muchas personas, resulta difícil crear estos primeros contactos. Las redes sociales que existen actualmente para conocer personas nuevas están creadas para múltiples finalidades como, por ejemplo, construir lazos románticos. Este tipo de funciones no se alinean directamente con los deseos de nuestrxs usuarixs objetivo, por esto ideamos una aplicación exclusivamente para personas migrantes que deseen conocer a otras.
 
