@@ -42,7 +42,6 @@ export const Welcome = () => {
   loginButton.textContent = "Entrar";
   const googleLoginBtn = document.createElement("button");
   googleLoginBtn.setAttribute("id", "googleLoginBtnG");
-  //googleLoginBtn.textContent = "Ingresa con Google";
   const registerLink = document.createElement("button");
   registerLink.setAttribute("id", "registerLink1");
   registerLink.textContent = "¿No tienes una cuenta? ¡Puedes crearla aquí!";
