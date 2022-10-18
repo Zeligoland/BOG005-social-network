@@ -88,7 +88,7 @@ ________________________________________________________________________________
 
 ## 4. Diseño de la interfaz: Prototipos
 
-***Flujo que seguirá el usuario:*** El Usuario de MigroRed iniciará su recorrido por la página de Ingreso, la cual invitará a que el mismo ingrese su correo electrónico y contraseña previamente registrado, en caso contrario invitará al mismo a registrarse, paso seguido, el usuario podrá ver las publicaciones que otros usuarios han hecho, así mismo, podrá interactuar con las mismas por medio de Likes, de igual manera, podrá hacer sus propias publicaciones, editarlas y eliminarlas si es lo que desea, por último, podrá cerrar su sesión de miembro de MigroRed e inicar de nuevo en nuestra vista de inicio.
+***Flujo que seguirá el usuario:*** El Usuario de MigroRed iniciará su recorrido por la página de Ingreso, la cual invitará a que el mismo ingrese su correo electrónico y contraseña previamente registrado, en caso contrario invitará al mismo a registrarse, paso seguido, el usuario podrá ver las publicaciones que otros usuarios han hecho, así mismo, podrá interactuar con las mismas por medio de Likes, de igual manera, podrá hacer sus propias publicaciones, editarlas y eliminarlas si es lo que desea, por último, podrá cerrar su sesión de miembro de MigroRed e inicar de nuevo en nuestra vista de inicio:
 
 
 ***PROTOTIPO DE BAJA FIDELIDAD***
@@ -163,8 +163,11 @@ Respuesta del usuario: Como podemos ver en la imágen de las estadísticas, los 
 
 ## 5. Producto final - Interfaz de usuario
 
-### 5.1 Boilerplate
+Desde el inicio MigroRed se enfocó en tener al usuario como base para esta aplicación, es por eso que gracias a Test de usabilidad, feedback de nuestros Coaches y Compañeras pudimos lograr un diseño eficiente, con propósito y que se adapta a las necesidades de nuestros usuarios, a continuación nuestra aplicación en su diseño final en prototipo movil:
 
-### 5.2 Definición del producto
+![User test](src/img/mobileWelcome.png)
 
-*Iconos de Like y editar lo atribuimos al trabajo de los diseñadores de https://www.freepik.com/*
+
+![User test](src/img/mobileWall.png)
+
+*Los íconos de Like y editar los atribuimos al trabajo de los diseñadores de https://www.freepik.com/*
