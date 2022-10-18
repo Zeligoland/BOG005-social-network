@@ -36,6 +36,12 @@ describe('onNavigate', () => {
   })
   });
 
+  //const mockTemplateWall = () => {
+   // const 
+  //}
+
+  //describe ('')
+
 // import { signInUser } from "../src/lib/auth.js";
 
 //describe('Arroja error para correo invalido', () => {

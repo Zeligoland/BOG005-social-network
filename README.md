@@ -10,16 +10,21 @@
 
 ## 1. Definición del producto
 
-Instagram, Snapchat, Twitter, Facebook, Twitch, Linkedin, etc. Las redes
-sociales han invadido nuestras vidas. Las amamos u odiamos, y muchos no podemos
-vivir sin ellas.
+Un proceso migratorio implica retos enormes de adaptación para las personas, además de tener que ajustarse a las dinámicas del nuevo contexto, es indispensable para ellas crear redes de apoyo nuevas y, en la actualidad, las redes sociales juegan un papel fundamental en este proceso.
 
-![adem-ay-Tk9m_HP4rgQ-unsplash](https://user-images.githubusercontent.com/110297/135544666-4efa54f1-4ff6-4c4c-b398-6df04ef56117.jpg)
+![readmeimg](src/img/readmeimg.jpg)
 
+> Según Benítez, J. L. (2011), las redes sociales tienen “un papel decisivo en los procesos de toma de decisión de emigrar, el viaje o tránsito, la llegada e inserción en los países de destino, el mantenimiento de lazos y los procesos de comunicación transnacional” (Benítez, 2011, p. 39). 
+
+*Benítez, J. L. (2011). La comunicación transnacional de las familias e-migrantes. San Salvador: pnud/uca.*
+
+Establecer nuevas redes de apoyo contribuye al proceso de adaptación y, para muchas personas, resulta difícil crear estos primeros contactos. Las redes sociales que existen actualmente para conocer personas nuevas están creadas para múltiples finalidades como, por ejemplo, construir lazos románticos. Este tipo de funciones no se alinean directamente con los deseos de nuestrxs usuarixs objetivo, por esto ideamos una aplicación exclusivamente para personas migrantes que deseen conocer a otras.
+
+De esta manera, MigroRed al ser exclusivamente para migrantes que deseen ampliar su red, puede facilitar el establecimiento exitoso de los vínculos que nuestrxs usuarixs buscan.
 
 ## 2. Principales usuarios
 
-MigroRed está dirigida, inicialmente, a personas migrantes que hayan llegado a Colombia, no conozcan a nadie y deseen ampliar su red de apoyo. 
+Inicialmente, MigroRed está dirigida a personas migrantes que hayan llegado a Colombia y deseen ampliar su red de apoyo conociendo personas con los mismos intereses. A futuro, queremos que MigroRed sea una aplicación global con más funcionalidades que faciliten el objetivo de sus usuarixs.
 
 ______________________________________________________________________________________________________________________________________________
 
