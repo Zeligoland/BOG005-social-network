@@ -2,6 +2,7 @@ import { onNavigate } from "../main.js";
 import { saveTask, getTasks, onGetTasks, deleteTask, getTask, updateTask } from "../lib/firest.js";
 import { auth } from "../lib/auth.js";
 import { arrayUnion } from "../lib/utils.js";
+
 export const Wall = () => {
 
     const div = document.createElement("div");
@@ -37,8 +38,9 @@ export const Wall = () => {
     posters.setAttribute("class", "posters");
     const postComplete = document.createElement("section");
     postComplete.setAttribute("class", "postComplete");
+    const errorMessage = document.createElement("p");
 
-    posters.append(postComplete);
+    posters.append(errorMessage, postComplete);
 
     backButtonWall.addEventListener("click", () => {
         onNavigate("/");
@@ -46,11 +48,6 @@ export const Wall = () => {
 
     let editStatus = false;
     let id = "";
-    const hour = Date.now();
-
-
-
-     //window.addEventListener("hashchange",() => { // ¿para que queriamos esto?
     
         onGetTasks((querySnapshot) => {
             let html = "";
@@ -58,24 +55,10 @@ export const Wall = () => {
             querySnapshot.forEach((doc) => {
                 const task = doc.data();
                 const user = auth.currentUser;
-                //Constante para capturar la fecha
-                let fecha = new Date();
-                let diaSemana = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado"];
-                let mesAnyo = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre",
-                "Noviembre", "Diciembre"];
-                /* console.log(mesAnyo[fecha.getMonth()]);
-                console.log(`${diaSemana[fecha.getDay()]}, ${fecha.getDate()} de ${mesAnyo[fecha.getMonth()]} de ${fecha.getFullYear()}`); */
-                setInterval(() => {
-                    let hora = new Date();
-                    let horaFinal = hora.toLocaleTimeString();
-                   /* console.log(horaFinal);*/
-                }, 1000);
-
                 html += `
                 <div>
                 <section class="postBox">
                 <h2>${task.email}</h2>
-                <h2>${diaSemana[fecha.getDay()]}, ${fecha.getDate()} de ${mesAnyo[fecha.getMonth()]} de ${fecha.getFullYear()}</h2>
                 <br>
                 <button style=" visibility:${task.email === auth.currentUser.email?"visible":"hidden"}"class="btn-edit" data-id="${doc.id}"></button>
                 <section class="post">
@@ -99,15 +82,9 @@ export const Wall = () => {
                 btn.addEventListener("click", ({ target: { dataset } }) => {
                     console.log(auth.currentUser.email)
                     console.log("like", )
-                    // revisar si en arreglo de likes (task.likes) ya existe el correo
-                    //TIP array.includes 
-                    // Si el email existe debes llar a update task pero con arrayRemove
-                    // Si el email NO existe llmar a update task con arrayUnion
                     updateTask(dataset.id, {
                         likes:  arrayUnion(auth.currentUser.email)});
                    
-                    //doc.data.like incluye user restas uno del arreglo [genesi.com, yeny.com, lina.com] +añadir sergio.com
-                   // firebase metodo sirve aumentar o disminuir
                     counterLikes.innerHTML=``;
                     counterLike++;
                     counterLikes.innerHTML=`${counterLike}`;
@@ -146,26 +123,24 @@ export const Wall = () => {
                 })
             })
         });
-     //});
 
     postButton.addEventListener("click", (e) => {
         e.preventDefault();
 
         const post = postElement;
-        let fecha = new Date();
 
+        if (post.value === "") {
+            return errorMessage.textContent = "Por favor escriba algo";
+        }
 
-
-        // saveTask(postElement.value);
        if (!editStatus) {
-        saveTask(postElement.value,auth.currentUser.email, fecha.value);
+        saveTask(postElement.value,auth.currentUser.email);
        } else {
         updateTask(id, {
             postElement: postElement.value});
             editStatus = false;
-
-       };
-
+        } 
+       
         postElement.value = ""; 
         postButton.innerText = "Publicar";
 
