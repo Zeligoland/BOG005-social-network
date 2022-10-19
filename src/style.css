@@ -292,8 +292,9 @@ h2 {
 .counter-likes {
     color: black;
     font-size: 15px;
-    margin-left: -232px;
+    margin-left: 24px;
     position: relative;
+    width: 10px;
 }
 
 /* Media Queries for Mobile S Register, login & Wall*/
