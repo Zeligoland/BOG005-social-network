@@ -54,13 +54,13 @@ export const Wall = () => {
             let counterLike = 0;
             querySnapshot.forEach((doc) => {
                 const task = doc.data();
-                const user = auth.currentUser;
+                const user = auth.currentUser; //Revisar.
                 html += `
                 <div>
                 <section class="postBox">
                 <h2>${task.email}</h2>
                 <br>
-                <button style=" visibility:${task.email === auth.currentUser.email?"visible":"hidden"}"class="btn-edit" data-id="${doc.id}"></button>
+                <button style=" visibility:${task.email === auth.currentUser.email?"visible":"hidden"}"class="btn-edit" data-id="${doc.id}"></button> 
                 <section class="post">
                 <h3>${task.postElement}</h3>
                 </section>
@@ -74,7 +74,6 @@ export const Wall = () => {
             postComplete.innerHTML = html;
             
             const btnsDelete = postComplete.querySelectorAll(".btn-delete");
-            
             const counterLikes = postComplete.querySelectorAll(".counter-likes");
             const btnLike = postComplete.querySelectorAll(".btn-like");
             
@@ -97,7 +96,7 @@ export const Wall = () => {
                 btn.addEventListener("click", ({ target: { dataset } }) => {
                     const result = confirm("¿Estás seguro de borrar esta publicación?");
                     if (result === true){
-                        return deleteTask(dataset.id);
+                        return deleteTask(dataset.id); //Averig. dataset
                     }
                     else {
                         return false;
@@ -111,7 +110,7 @@ export const Wall = () => {
 
             btnsEdit.forEach((btn) => {
                 btn.addEventListener("click", async (e) => {
-                    const doc = await getTask(e.target.dataset.id);
+                    const doc = await getTask(e.target.dataset.id); 
                     const task = doc.data();
 
                     taskForm.value = task.postElement;

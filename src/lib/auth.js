@@ -6,8 +6,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   signInWithEmailAndPassword,
-  onAuthStateChanged,
-
+  onAuthStateChanged, 
 } from "./utils.js";
 
 const firebaseConfig = {
