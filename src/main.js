@@ -7,6 +7,7 @@ import { Wall } from "./components/Wall.js";
 const routes = {
   // aquí va la ruta y lo que debe renderizar
   "/": Welcome,
+  "/BOG005-social-network/src/": Welcome,
   "/register" : Register,
   "/wall" : Wall,
  };
