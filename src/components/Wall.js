@@ -66,7 +66,7 @@ export const Wall = () => {
                 </section>
                 <p class="counter-likes">${task.likes.length}</p>
                 <button class="btn-like" data-id="${doc.id}"></button>
-                <button style=" display:${task.email === auth.currentUser.email?"block":"none"}" class="btn-delete" data-id="${doc.id}">Borrar</button>
+                <button style=" display:${task.email === auth.currentUser.email ? "block" : "none"}" class="btn-delete" data-id="${doc.id}">Borrar</button>
                 </section>
                 </div>
                 `;

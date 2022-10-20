@@ -54,13 +54,13 @@ p {
     margin-right: 30px;
 }
 
-#emailLogin, 
+#emailLogin,
 #passwordLogin {
     padding: 8px 8px 8px 25px;
     width: 240px;
     margin-top: 20px;
     margin-bottom: 15px;
-    border-radius: 5px; 
+    border-radius: 5px;
     background-color: white;
     border: none;
     margin-left: 40px;
@@ -68,13 +68,13 @@ p {
     color: #595775;
 }
 
-#emailInput, 
+#emailInput,
 #passInput {
     padding: 8px 8px 8px 25px;
     width: 240px;
     margin-top: 15px;
     margin-bottom: 15px;
-    border-radius: 5px; 
+    border-radius: 5px;
     background-color: white;
     border: none;
     margin-left: 40px;
@@ -83,7 +83,7 @@ p {
 }
 
 #passwordLogin {
-    margin-top: 1px; 
+    margin-top: 1px;
 }
 
 #loginButton1,
@@ -101,7 +101,7 @@ p {
     cursor: pointer;
 }
 
-#googleLoginBtnG, 
+#googleLoginBtnG,
 #googleRegisterBtn {
     width: 240px;
     height: 29px;
@@ -114,7 +114,7 @@ p {
     background-position: center;
     border: none;
     background-color: white;
-    color: 0,0,0 (54%);
+    color: 0, 0, 0 (54%);
     margin-top: 10px;
     cursor: pointer;
 }
@@ -130,7 +130,7 @@ p {
     margin-left: 55px;
     font-family: 'DM Mono', mixed;
     font-size: 14px;
-    box-shadow:black;
+    box-shadow: black;
     margin-top: 10px;
     border: none;
     color: black;
@@ -181,7 +181,8 @@ p {
     margin-top: 20px;
     border-radius: 11px;
     background-color: #F1E0D6;
-    position: -webkit-sticky; /* Mantiene estático el sectionPost */
+    position: -webkit-sticky;
+    /* Mantiene estático el sectionPost */
     position: sticky;
     top: 0;
     height: 111px;
@@ -235,7 +236,7 @@ p {
     padding: 21px;
     background-color: white;
     border: none;
-    border-radius: 10px ;
+    border-radius: 10px;
     margin-left: 20px;
     margin-right: 20px;
     box-shadow: inset 2px 1px 1px 1px rgb(176, 169, 168);
@@ -265,7 +266,7 @@ h2 {
     height: 20px;
     background-image: url(img/editar-texto.png);
     background-size: contain;
-    background-color:#F1E0D6;
+    background-color: #F1E0D6;
     background-repeat: no-repeat;
     border: none;
     position: absolute;
@@ -281,10 +282,10 @@ h2 {
     background-color: #F1E0D6;
     border: none;
     width: 28px;
-    height: 29px; 
-    margin-top: -28px;  
+    height: 29px;
+    margin-top: -28px;
     border-radius: 9px;
-    margin-left: 35px; 
+    margin-left: 35px;
     position: relative;
     display: flex;
 }
@@ -322,15 +323,15 @@ h2 {
         margin-left: 5px;
         margin-top: 6px;
     }
-    
+
     p {
         font-size: 12px;
         width: 400%;
         margin-top: -10px;
         margin-left: 250px;
-        margin-right: 0px;  
+        margin-right: 0px;
     }
-    
+
     .welcomeMessage {
         font-size: 9px;
         width: 400%;
@@ -344,7 +345,7 @@ h2 {
         width: 250px;
         margin-top: 4px;
     }
-    
+
     #sectioni,
     #registerBox {
         position: relative;
@@ -354,8 +355,8 @@ h2 {
         height: 158px;
         width: 260px;
     }
-    
-    #emailLogin, 
+
+    #emailLogin,
     #passwordLogin,
     #emailInput,
     #passInput {
@@ -368,7 +369,7 @@ h2 {
     }
 
     #passwordLogin {
-        margin-top: 1px; 
+        margin-top: 1px;
     }
 
     #loginButton1,
@@ -382,7 +383,7 @@ h2 {
         font-size: 11px;
     }
 
-    #googleLoginBtnG, 
+    #googleLoginBtnG,
     #googleRegisterBtn {
         width: 219px;
         height: 22px;
@@ -419,33 +420,34 @@ h2 {
     #migroRedLogoW {
         margin-left: 119px;
     }
-    
+
     #backButton1 {
         margin-left: 463px;
         margin-top: -23px;
     }
-    
+
     #welcomeWall {
         margin-left: 250px;
     }
-    
+
     #sectionPost {
         margin-left: 30px;
         margin-right: 30px;
         margin-top: 20px;
-        position: -webkit-sticky; /* Mantiene estático el sectionPost */
+        position: -webkit-sticky;
+        /* Mantiene estático el sectionPost */
         position: sticky;
         top: 0;
         height: 111px;
         width: 268px;
     }
-    
+
     #postContent {
         width: 237px;
         margin-left: 15px;
         margin-top: 14px;
     }
-    
+
     #postButton1 {
         width: 79px;
         height: 25px;
@@ -453,7 +455,7 @@ h2 {
         margin-left: 174px;
         margin-block-end: 10px;
     }
-    
+
     .btn-delete {
         width: 79px;
         height: 25px;
@@ -462,7 +464,7 @@ h2 {
         margin-block-end: 10px;
         display: flex;
     }
-    
+
     .post {
         padding: 13px;
         margin-left: 20px;
@@ -471,7 +473,7 @@ h2 {
         height: 71px;
         width: 228px;
     }
-    
+
     .postBox {
         margin-top: 15px;
         margin-left: 30px;
@@ -479,11 +481,11 @@ h2 {
         height: 131px;
         width: 269px;
     }
-    
+
     h2 {
         margin-left: 49px;
     }
-    
+
     .btn-edit {
         width: 20px;
         height: 20px;
@@ -492,16 +494,16 @@ h2 {
         margin-top: 62px;
         display: flex;
     }
-    
+
     .btn-like {
         width: 28px;
-        height: 29px; 
-        margin-top: -28px;  
-        margin-left: 35px; 
+        height: 29px;
+        margin-top: -28px;
+        margin-left: 35px;
         position: relative;
         display: flex;
     }
-    
+
     .counter-likes {
         margin-left: -509px;
         position: relative;
@@ -535,15 +537,15 @@ h2 {
         margin-left: 50px;
         margin-top: 5px;
     }
-    
+
     p {
         font-size: 16px;
         width: 400%;
         margin-top: 0px;
         margin-left: 320px;
-        margin-right: 0px;  
+        margin-right: 0px;
     }
-    
+
     .welcomeMessage {
         font-size: 12px;
         width: 400%;
@@ -556,7 +558,7 @@ h2 {
         margin-left: 40px;
         width: 345px;
     }
-    
+
     #sectioni,
     #registerBox {
         position: relative;
@@ -565,8 +567,8 @@ h2 {
         height: 196px;
         width: 279px;
     }
-    
-    #emailLogin, 
+
+    #emailLogin,
     #passwordLogin,
     #emailInput,
     #passInput {
@@ -577,7 +579,7 @@ h2 {
     }
 
     #passwordLogin {
-        margin-top: 1px; 
+        margin-top: 1px;
     }
 
     #loginButton1,
@@ -591,7 +593,7 @@ h2 {
         cursor: pointer;
     }
 
-    #googleLoginBtnG, 
+    #googleLoginBtnG,
     #googleRegisterBtn {
         width: 220px;
         height: 25px;
@@ -643,7 +645,7 @@ h2 {
         margin-bottom: 5%;
     }
 
-    #migroRedLogo{
+    #migroRedLogo {
         margin-bottom: 25px;
         margin-left: 279px;
         height: 108px;
@@ -651,14 +653,14 @@ h2 {
         margin-top: 25px;
     }
 
-    #migroRedLogoR{
+    #migroRedLogoR {
         margin-bottom: 25px;
         margin-left: 133px;
         height: 108px;
         width: 502px;
         margin-top: 15px;
     }
-    
+
     p {
         font-size: 27px;
         width: 123%;
@@ -666,7 +668,7 @@ h2 {
         margin-left: 296px;
         margin-right: 0px;
     }
-    
+
     .welcomeMessage {
         font-size: 19px;
         width: 134%;
@@ -681,7 +683,7 @@ h2 {
         margin-right: 0px;
         margin-top: 28px
     }
-    
+
     #sectioni {
         position: relative;
         left: 17%;
@@ -699,8 +701,8 @@ h2 {
         height: 297px;
         width: 425px;
     }
-    
-    #emailLogin, 
+
+    #emailLogin,
     #passwordLogin,
     #emailInput,
     #passInput {
@@ -712,7 +714,7 @@ h2 {
     }
 
     #passwordLogin {
-        margin-top: 1px; 
+        margin-top: 1px;
     }
 
     #loginButton1,
@@ -725,7 +727,7 @@ h2 {
         margin-top: 1px;
     }
 
-    #googleLoginBtnG, 
+    #googleLoginBtnG,
     #googleRegisterBtn {
         width: 349px;
         height: 33px;
@@ -760,6 +762,59 @@ h2 {
         margin-left: -9%;
         font-size: 23px;
     }
+
+    /*wall*/
+    #migroRedLogoW {
+        width: 300px;
+        margin-top: 8px;
+        margin-left: -35px;
+    }
+
+    #backButton1 {
+        width: 130px;
+        margin-left: 795px;
+        margin-top: 15px;
+        font-size: 15px;
+    }
+
+    #welcomeWall {
+        font-size: 17px;
+        margin-left: 28px;
+    }
+
+    #sectionPost {
+        margin-left: 70px;
+        margin-right: 70px;
+        margin-top: 20px;
+
+    }
+
+    #postContent {
+        width: 580px;
+        margin-left: 22px;
+        margin-top: 14px;
+    }
+
+    #postButton1 {
+        width: 92px;
+        margin-left: 510px;
+    }
+
+    .postBox {
+        margin-top: 23px;
+        margin-left: 70px;
+        width: 629px;
+    }
+
+
+    .btn-like {
+        margin-top: -28px;
+        margin-left: 50px;
+    }
+
+    .counter-likes {
+        margin-left: -352px;
+    }
 }
 
 /* Login Window - Media Queries for Laptop 1024px */
@@ -779,26 +834,26 @@ h2 {
         margin-bottom: 5%;
     }
 
-    #migroRedLogo{
+    #migroRedLogo {
         margin-bottom: 25px;
         margin-left: -152px;
     }
-    
+
     p {
         font-size: 16px;
         width: 80%;
         margin-top: 9px;
         margin-left: 0px;
-        margin-right: 0px;  
+        margin-right: 0px;
     }
-    
+
     .welcomeMessage {
         font-size: 16px;
         width: 80%;
         margin-left: 0px;
         margin-right: 0px;
     }
-    
+
     #sectioni {
         position: relative;
         left: 56%;
@@ -806,8 +861,8 @@ h2 {
         height: 390px;
         width: 390px;
     }
-    
-    #emailLogin, 
+
+    #emailLogin,
     #passwordLogin,
     #emailInput,
     #passInput {
@@ -819,7 +874,7 @@ h2 {
     }
 
     #passwordLogin {
-        margin-top: 1px; 
+        margin-top: 1px;
     }
 
     #loginButton1,
@@ -832,7 +887,7 @@ h2 {
         margin-top: 1px;
     }
 
-    #googleLoginBtnG, 
+    #googleLoginBtnG,
     #googleRegisterBtn {
         width: 320px;
         height: 55px;
@@ -863,6 +918,67 @@ h2 {
         margin-top: 10px;
     }
 
+    /*wall*/
+    #migroRedLogoW {
+        width: 330px;
+        margin-top: 8px;
+        margin-left: -132px;
+    }
+
+    #welcomeWall {
+        font-size: 19px;
+        margin-left: -69px;
+    }
+
+    #backButton1 {
+        width: 150px;
+        margin-left: 1139px;
+        margin-top: 15px;
+        font-size: 15px;
+    }
+
+    #sectionPost {
+        margin-left: 70px;
+        margin-right: 70px;
+        margin-top: 20px;
+        height: 140px;
+    }
+
+    #postContent {
+        width: 828px;
+        padding: 22px;
+        margin-left: 24px;
+        margin-top: 19px;
+        font-size: 15px;
+    }
+
+    #postButton1 {
+        margin-left: 774px;
+        font-size: 13px;
+    }
+
+    .postBox {
+        margin-top: 30px;
+        margin-left: 70px;
+        width: 883px;
+    }
+
+    h2 {
+        font-size: 17px;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+
+    .counter-likes {
+        margin-left: -323px;
+    }
+
+    .btn-like {
+        margin-left: 41px;
+    }
+
 }
 
 /* Login Window - Media Queries for Laptop 1440px */
@@ -874,7 +990,7 @@ h2 {
         margin-top: 4%;
     }
 
-    #emailLogin, 
+    #emailLogin,
     #passwordLogin,
     #emailInput,
     #passInput {
@@ -907,7 +1023,7 @@ h2 {
         margin-top: 1px;
     }
 
-    #googleLoginBtnG, 
+    #googleLoginBtnG,
     #googleRegisterBtn {
         width: 380px;
         height: 60px;
@@ -923,7 +1039,7 @@ h2 {
         margin-right: 50px;
         margin-left: 39px;
         font-size: 16px;
-        margin-top: 16px;    
+        margin-top: 16px;
     }
 
     #diversityImage {
@@ -933,4 +1049,71 @@ h2 {
         margin-bottom: 0px;
         position: fixed;
     }
+
+    /*wall*/
+    #migroRedLogoW {
+        width: 390px;
+        margin-top: 30px;
+        margin-left: 160px;
+    }
+
+    #welcomeWall {
+        font-size: 22px;
+        margin-left: -634px;
+    }
+
+    #backButton1 {
+        width: 170px;
+        margin-left: 1084px;
+        font-size: 20px;
+    }
+
+    #sectionPost {
+        width: 1100px;
+        margin-left: 160px;
+        margin-top: 34px;
+        height: 185px;
+    }
+
+    #postContent {
+        width: 1046px;
+        padding: 30px;
+        margin-left: 24px;
+        margin-top: 26px;
+        font-size: 19px;
+    }
+
+    #postButton1 {
+        width: 150px;
+        height: 33px;
+        margin-left: 918px;
+        margin-top: 5px;
+        font-size: 17px;
+    }
+
+    .postBox {
+        margin-top: 35px;
+        margin-left: 160px;
+        width: 1100px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .counter-likes {
+        margin-right: 783px;
+        font-size: 22px;
+        margin-top: auto;
+    }
+
+    .btn-like {
+        margin-left: 60px;
+    }
+
+
 }
