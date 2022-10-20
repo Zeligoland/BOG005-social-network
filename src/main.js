@@ -7,6 +7,7 @@ import { Wall } from "./components/Wall.js";
 const routes = {
   // aquí va la ruta y lo que debe renderizar
   "/": Welcome,
+  "/BOG005-social-network/src/": Welcome,
   "/register" : Register,
   "/wall" : Wall,
  };
@@ -20,23 +21,22 @@ export const onNavigate = (pathname, paramRoutes = routes) => {
     pathname, 
     window.location.origin + pathname,
     );
-  if (root.firstChild) {
-    root.removeChild(root.firstChild)
-  };
+    if (root.firstChild) {
+      root.removeChild(root.firstChild);
+    }  
   root.appendChild(paramRoutes[pathname]());
 };
-
 
 window.onpopstate = () => {
   const component = routes[window.location.pathname];
   const root = document.getElementById("root");
   if (root.firstChild) {
-    root.removeChild(root.firstChild)
-  };
+    root.removeChild(root.firstChild) 
+  }
   root.append(component());
 };
 
 window.addEventListener("load", () => {
   const component = routes[window.location.pathname];
   root.appendChild(component());
-})
+});
