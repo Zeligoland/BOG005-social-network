@@ -7,8 +7,7 @@ export const saveTask = (postElement,email) => {
     addDoc(collection(db, "tasks"), {postElement, likes: [], email}) //añadir like: []/ like: 0
 };
 
-export const getTasks = () => getDocs(collection(db, "tasks")); //revisar.
-
+export const getTasks = () => getDocs(collection(db, "tasks")); 
 export const onGetTasks = (callback) => onSnapshot(collection(db,"tasks"), callback);
 export const deleteTask = (id) => deleteDoc(doc(db, "tasks", id));
 export const getTask = (id) => getDoc(doc(db, "tasks", id)); 

@@ -10,12 +10,12 @@ import {
 } from "./utils.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAjKkyDbHluBqhq8ZVzEkc1vb231KCN8os",
-  authDomain: "migrored-9fcb3.firebaseapp.com",
-  projectId: "migrored-9fcb3",
-  storageBucket: "migrored-9fcb3.appspot.com",
-  messagingSenderId: "947566190597",
-  appId: "1:947566190597:web:a0d69f203b5840fa2b7c6c"
+  apiKey: "AIzaSyDx_0y-QEOg_iKrs2rvQkEXNMtu9I9UmRo",
+  authDomain: "migroredsn.firebaseapp.com",
+  projectId: "migroredsn",
+  storageBucket: "migroredsn.appspot.com",
+  messagingSenderId: "893397271902",
+  appId: "1:893397271902:web:773b4f117290368ad9bbcf"
 };
 
 //Inicializamos Firebase
